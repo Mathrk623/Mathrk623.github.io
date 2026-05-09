@@ -67,3 +67,14 @@ footer {
     text-align: center; 
     font-size: 0.9em; 
 }
+
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* スマホではメニューを縦に並べる */
+        gap: 10px;
+    }
+    body {
+        padding: 10px; /* スマホでは余白を狭くして画面を広く使う */
+    }
+}
