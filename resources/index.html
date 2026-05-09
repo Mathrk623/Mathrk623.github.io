@@ -2,60 +2,23 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Math Notes - 自主ゼミと勉強の記録</title>
-    
-    <!-- 数式を表示するためのMathJaxの設定 -->
-    <script>
-        window.MathJax = {
-            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
-        };
-    </script>
+    <title>Notes - My Math Notes</title>
+    <link rel="stylesheet" href="/style.css"> <!-- CSSの読み込み -->
+    <!-- MathJaxの設定 -->
+    <script>window.MathJax = { tex: { inlineMath: [['$', '$']] } };</script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-    <style>
-        :root {
-            --primary-color: #2c3e50;
-            --bg-color: #f8f9fa;
-        }
-        body {
-            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: var(--bg-color);
-        }
-        header { border-bottom: 2px solid var(--primary-color); margin-bottom: 30px; }
-        nav ul { list-style: none; padding: 0; display: flex; gap: 20px; }
-        nav a { text-decoration: none; color: var(--primary-color); font-weight: bold; }
-        h2 { border-left: 5px solid var(--primary-color); padding-left: 10px; margin-top: 40px; }
-        .card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; }
-        .post-date { font-size: 0.8em; color: #666; }
-        footer { margin-top: 50px; text-align: center; font-size: 0.8em; color: #888; }
-        .category-tag { font-size: 0.7em; background: #eee; padding: 2px 8px; border-radius: 4px; }
-    </style>
+    <!-- 共通JSの読み込み（最後に実行させるためにdeferをつける） -->
+    <script src="/common.js" defer></script>
 </head>
 <body>
-
-<header>
-    <h1>My Math Notes</h1>
-    <nav>
-        <ul>
-            <li><a href="#home">ホーム</a></li>
-            <li><a href="#notes">ノート類</a></li>
-            <li><a href="#memo">メモ</a></li>
-            <li><a href="#resources">資料</a></li>
-        </ul>
-    </nav>
-</header>
-
-（資料）
-
-<footer>
-    <p>&copy; 2024 Your Name</p>
-</footer>
-
+    <main>
+        <h2>ノート類</h2>
+        <div class="card">
+            <h3>代数学</h3>
+            <ul>
+                <li><a href="/pdfs/algebra1.pdf">群論の基礎.pdf</a></li>
+            </ul>
+        </div>
+    </main>
 </body>
 </html>
