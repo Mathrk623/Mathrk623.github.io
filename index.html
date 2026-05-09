@@ -2,103 +2,23 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Math Notes - 自主ゼミと勉強の記録</title>
-    
-    <!-- 数式を表示するためのMathJaxの設定 -->
-    <script>
-        window.MathJax = {
-            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
-        };
-    </script>
+    <title>Notes - My Math Notes</title>
+    <link rel="stylesheet" href="/style.css"> <!-- CSSの読み込み -->
+    <!-- MathJaxの設定 -->
+    <script>window.MathJax = { tex: { inlineMath: [['$', '$']] } };</script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-    <style>
-        :root {
-            --primary-color: #2c3e50;
-            --bg-color: #f8f9fa;
-        }
-        body {
-            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: var(--bg-color);
-        }
-        header { border-bottom: 2px solid var(--primary-color); margin-bottom: 30px; }
-        nav ul { list-style: none; padding: 0; display: flex; gap: 20px; }
-        nav a { text-decoration: none; color: var(--primary-color); font-weight: bold; }
-        h2 { border-left: 5px solid var(--primary-color); padding-left: 10px; margin-top: 40px; }
-        .card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; }
-        .post-date { font-size: 0.8em; color: #666; }
-        footer { margin-top: 50px; text-align: center; font-size: 0.8em; color: #888; }
-        .category-tag { font-size: 0.7em; background: #eee; padding: 2px 8px; border-radius: 4px; }
-    </style>
+    <!-- 共通JSの読み込み（最後に実行させるためにdeferをつける） -->
+    <script src="/common.js" defer></script>
 </head>
 <body>
-
-<header>
-    <h1>My Math Notes</h1>
-    <nav>
-        <ul>
-            <li><a href="./">ホーム</a></li>
-            <li><a href="./notes/">ノート類</a></li>
-            <li><a href="./memo">メモ</a></li>
-            <li><a href="./resources">資料</a></li>
-        </ul>
-    </nav>
-</header>
-
-<section id="home">
-    <div class="card">
-        <h3>掲示</h3>
-        <p>数学科3年の〇〇のページです。自主ゼミの記録や勉強した内容をまとめています。</p>
-        <h3>連絡先</h3>
-        <p>Email: your-email [at] example.com</p>
-    </div>
-</section>
-
-<section id="notes">
-    <h2>ノート類</h2>
-    <div class="card">
-        <h4>代数学</h4>
-        <ul>
-            <li><a href="pdfs/algebra_01.pdf">群論基礎ノート (PDF)</a></li>
-            <li><a href="#">環論セミナー資料 (準備中)</a></li>
-        </ul>
-        <h4>幾何学</h4>
-        <ul>
-            <li><a href="pdfs/geometry_01.pdf">多様体入門 (PDF)</a></li>
-        </ul>
-    </div>
-</section>
-
-<section id="memo">
-    <h2>メモ（数式記事）</h2>
-    <div class="card">
-        <span class="post-date">2024/05/10</span>
-        <h4>Cauchyの積分公式について</h4>
-        <p>複素関数 $f(z)$ が領域 $D$ で正則のとき、次が成り立つ：</p>
-        <p>\[ f(a) = \frac{1}{2\pi i} \oint_{\gamma} \frac{f(z)}{z-a} dz \]</p>
-        <p>これを用いると、高階導関数の値も計算できるのが非常に面白い...</p>
-    </div>
-</section>
-
-<section id="resources">
-    <h2>資料</h2>
-    <div class="card">
-        <h4>外部文献・リンク</h4>
-        <ul>
-            <li><a href="https://example.com/lecture-note.pdf" target="_blank">〇〇先生の講義ノート</a> <span class="category-tag">解析学</span></li>
-        </ul>
-    </div>
-</section>
-
-<footer>
-    <p>&copy; 2024 Your Name</p>
-</footer>
-
+    <main>
+        <h2>ノート類</h2>
+        <div class="card">
+            <h3>代数学</h3>
+            <ul>
+                <li><a href="/pdfs/algebra1.pdf">群論の基礎.pdf</a></li>
+            </ul>
+        </div>
+    </main>
 </body>
 </html>
