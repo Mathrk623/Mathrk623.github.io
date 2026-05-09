@@ -16,9 +16,13 @@ body {
     background-color: var(--bg-white);
 }
 
-header { 
-    border-bottom: 2px solid var(--main-black); 
-    margin-bottom: 30px; 
+header {
+    position: sticky; /* スクロールしても上についてくるようにすると便利です */
+    top: 0;
+    background-color: #ffffff;
+    z-index: 100; /* ヘッダーを一番手前に */
+    border-bottom: 2px solid var(--main-black);
+    margin-bottom: 30px;
 }
 
 h1 a {
@@ -73,3 +77,17 @@ h2 {
     nav ul { gap: 12px; }
     nav a { font-size: 0.85rem; } /* スマホでは少し文字を小さく */
 }
+
+.featured-badge {
+    position: absolute;
+    top: -12px; /* カードの外に少しはみ出させる */
+    left: 15px;
+    background: var(--accent-red);
+    color: white;
+    padding: 2px 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 4px;
+    z-index: 10; /* カード(z-index未指定なら0)より上に表示 */
+}
+
