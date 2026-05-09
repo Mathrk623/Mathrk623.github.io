@@ -1,1 +1,69 @@
+:root {
+    --chalk-white: #f5f5f5;
+    --blackboard-green: #2e524a; /* 黒板の深い緑 */
+    --accent-gold: #d4af37;     /* チョークの黄色をイメージしたアクセント */
+    --text-color: #333;
+}
 
+body {
+    font-family: 'Times New Roman', 'Hiragino Mincho ProN', serif; /* 数学徒らしく明朝系 */
+    line-height: 1.7;
+    color: var(--text-color);
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fafafa;
+}
+
+/* ヘッダーとフッター */
+header { 
+    border-bottom: 3px solid var(--blackboard-green); 
+    margin-bottom: 30px; 
+}
+
+h1 a {
+    text-decoration: none;
+    color: var(--blackboard-green);
+}
+
+nav ul { 
+    list-style: none; 
+    padding: 0; 
+    display: flex; 
+    gap: 25px; 
+}
+
+nav a { 
+    text-decoration: none; 
+    color: var(--text-color); 
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover { color: var(--blackboard-green); }
+
+/* コンテンツエリア */
+h2 { 
+    background: var(--blackboard-green);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 4px;
+    margin-top: 40px;
+}
+
+.card { 
+    background: white; 
+    padding: 20px; 
+    border-radius: 2px; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); 
+    margin-bottom: 20px;
+    border-left: 4px solid var(--blackboard-green);
+}
+
+footer { 
+    margin-top: 60px; 
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    text-align: center; 
+    font-size: 0.9em; 
+}
