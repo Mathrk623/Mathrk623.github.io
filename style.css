@@ -59,10 +59,12 @@ h2 {
 }
 
 .card { 
-    background: var(--bg-white); 
+    background: white; 
     padding: 20px; 
-    border-bottom: 1px solid var(--blackboard-green); /* カードを囲わず、下線だけで区切るスタイル */
+    border-radius: 2px; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); 
     margin-bottom: 20px;
+    border-left: 4px solid #eee;
 }
 
 /* スマホ表示の微調整 */
