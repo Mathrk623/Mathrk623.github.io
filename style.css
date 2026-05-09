@@ -61,7 +61,7 @@ h2 {
 .card { 
     background: var(--bg-white); 
     padding: 20px; 
-    border-bottom: 1px solid #eee; /* カードを囲わず、下線だけで区切るスタイル */
+    border-bottom: 1px solid var(--blackboard-green); /* カードを囲わず、下線だけで区切るスタイル */
     margin-bottom: 20px;
 }
 
