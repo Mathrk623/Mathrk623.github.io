@@ -3,18 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Math Notes</title>
-    
-    <!-- CSSの読み込み -->
+    <title>Memo - My Math Notes</title>
     <link rel="stylesheet" href="/style.css">
-
-    <!-- MathJaxの設定（数式用） -->
-    <script>
-        window.MathJax = {
-            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
-        };
-    </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        /* メモ一覧専用の追加スタイル */
+        .featured-post {
+            border: 2px solid var(--main-blue);
+            background: var(--light-gray);
+            position: relative;
+        }
+        .featured-badge {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: var(--accent-red);
+            color: white;
+            padding: 2px 10px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+        .post-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: 0.2s;
+        }
+        .post-link:hover {
+            opacity: 0.8;
+            transform: translateY(-2px);
+        }
+        .category-tag {
+            display: inline-block;
+            background: var(--main-blue);
+            color: white;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 3px;
+            margin-bottom: 8px;
+        }
+        .post-meta {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .post-summary {
+            font-size: 0.95rem;
+            color: #444;
+        }
+        /* カテゴリの見出し */
+        .category-section-title {
+            margin-top: 50px;
+            font-size: 1.4rem;
+            border-bottom: 2px solid var(--main-black);
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
 
@@ -22,7 +66,6 @@
     <h1><a href="/">My Math Notes</a></h1>
     <nav>
         <ul>
-            <!-- 今いるページの <a> タグに class="active" を付与します -->
             <li><a href="/">Home</a></li>
             <li><a href="/notes/">Notes</a></li>
             <li><a href="/memo/" class="active">Memo</a></li>
@@ -32,11 +75,52 @@
 </header>
 
 <main>
-    あ
+    <h2>メモ・記事一覧</h2>
+
+    <!-- イチオシ記事 (Featured) -->
+    <section>
+        <div class="featured-badge">PICK UP</div>
+        <a href="/memo/cauchy-integral.html" class="post-link">
+            <div class="card featured-post">
+                <span class="category-tag">複素解析</span>
+                <div class="post-meta">2026/05/10</div>
+                <h3>Cauchyの積分公式の幾何学的理解</h3>
+                <p class="post-summary">正則関数の「硬さ」を象徴するコーシーの積分公式について、その直感的なイメージと導出をまとめました。</p>
+            </div>
+        </a>
+    </section>
+
+    <!-- カテゴリ別一覧 -->
+    <h3 class="category-section-title">代数学</h3>
+    <section class="category-grid">
+        <a href="/memo/group-isomorphism.html" class="post-link">
+            <div class="card">
+                <span class="category-tag">代数学</span>
+                <div class="post-meta">2026/04/20</div>
+                <h3>群の準同型定理の整理</h3>
+                <p class="post-summary">第一から第三準同型定理まで、図解を用いて具体例とともに整理しました。</p>
+            </div>
+        </a>
+    </section>
+
+    <h3 class="category-section-title">解析学</h3>
+    <section class="category-grid">
+        <a href="/memo/uniform-convergence.html" class="post-link">
+            <div class="card">
+                <span class="category-tag">解析学</span>
+                <div class="post-meta">2026/03/15</div>
+                <h3>項別微分の条件と一様収束</h3>
+                <p class="post-summary">関数列の極限と微分の順序交換ができる条件について、反例を交えて解説します。</p>
+            </div>
+        </a>
+        
+        <!-- 新しい記事が増えたらここに a タグのセットを追加 -->
+    </section>
+
 </main>
 
 <footer>
-    <p>&copy; 2024 Your Name - Built with MathJax & GitHub Pages</p>
+    <p>&copy; 2026 Your Name</p>
 </footer>
 
 </body>
