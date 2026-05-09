@@ -78,3 +78,8 @@ footer {
         padding: 10px; /* スマホでは余白を狭くして画面を広く使う */
     }
 }
+
+nav a.active {
+    color: var(--accent-gold);
+    border-bottom: 2px solid var(--accent-gold);
+}
