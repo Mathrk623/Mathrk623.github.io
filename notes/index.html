@@ -8,10 +8,17 @@
     <!-- MathJaxの設定 -->
     <script>window.MathJax = { tex: { inlineMath: [['$', '$']] } };</script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <!-- 共通JSの読み込み（最後に実行させるためにdeferをつける） -->
-    <script src="/common.js" defer></script>
 </head>
 <body>
+    <h1><a href="/">My Math Notes</a></h1>
+    <nav>
+        <ul>
+            <li><a href="/" class="${currentPath === '/' ? 'active' : ''}">Home</a></li>
+            <li><a href="/notes/" class="${currentPath.includes('/notes/') ? 'active' : ''}">Notes</a></li>
+            <li><a href="/memo/" class="${currentPath.includes('/memo/') ? 'active' : ''}">Memo</a></li>
+            <li><a href="/resources/" class="${currentPath.includes('/resources/') ? 'active' : ''}">Resources</a></li>
+        </ul>
+    </nav>
     <main>
         <h2>ノート類</h2>
         <div class="card">
