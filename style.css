@@ -1,89 +1,73 @@
 :root {
-    --chalk-white: #f5f5f5;
-    --blackboard-green: #2e524a; /* 黒板の深い緑 */
-    --accent-gold: #d4af37;     /* チョークの黄色をイメージしたアクセント */
-    --text-color: #333;
+    --main-black: #222;
+    --main-blue: #004a99;      /* 信頼感のある青 */
+    --accent-red: #a50000;     /* 差し色の濃い赤 */
+    --bg-white: #ffffff;
+    --light-gray: #f0f4f8;
 }
 
 body {
-    font-family: 'Times New Roman', 'Hiragino Mincho ProN', serif; /* 数学徒らしく明朝系 */
+    font-family: 'Times New Roman', 'Hiragino Mincho ProN', serif;
     line-height: 1.7;
-    color: var(--text-color);
+    color: var(--main-black);
     max-width: 850px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fafafa;
+    background-color: var(--bg-white);
 }
 
-/* ヘッダーとフッター */
 header { 
-    border-bottom: 3px solid var(--blackboard-green); 
+    border-bottom: 2px solid var(--main-black); 
     margin-bottom: 30px; 
 }
 
 h1 a {
     text-decoration: none;
-    color: var(--blackboard-green);
+    color: var(--main-black);
 }
 
+/* ナビゲーション */
 nav ul { 
     list-style: none; 
     padding: 0; 
     display: flex; 
-    gap: 25px; 
+    gap: 15px;      /* 間隔を少し詰める */
+    flex-wrap: nowrap; /* 折り返さない */
+    overflow-x: auto;  /* はみ出す場合は横スクロール可能に */
+    -webkit-overflow-scrolling: touch;
 }
 
 nav a { 
     text-decoration: none; 
-    color: var(--text-color); 
+    color: var(--main-blue); 
     font-weight: bold;
-    transition: 0.3s;
+    white-space: nowrap; /* 文字を改行させない */
+    font-size: 0.95rem;
 }
 
-nav a:hover { color: var(--blackboard-green); }
+nav a.active {
+    color: var(--accent-red); /* 今のページを赤に */
+    border-bottom: 2px solid var(--accent-red);
+}
 
-/* コンテンツエリア */
+/* コンテンツ */
 h2 { 
-    background: var(--blackboard-green);
-    color: white;
-    padding: 5px 15px;
-    border-radius: 4px;
+    border-bottom: 1px solid var(--main-blue);
+    color: var(--main-blue);
+    padding-bottom: 5px;
     margin-top: 40px;
 }
 
 .card { 
-    background: white; 
+    background: var(--bg-white); 
     padding: 20px; 
-    border-radius: 2px; 
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05); 
+    border-bottom: 1px solid #eee; /* カードを囲わず、下線だけで区切るスタイル */
     margin-bottom: 20px;
-    border-left: 4px solid var(--blackboard-green);
 }
 
-footer { 
-    margin-top: 60px; 
-    padding-top: 20px;
-    border-top: 1px solid #ddd;
-    text-align: center; 
-    font-size: 0.9em; 
-}
-
-
+/* スマホ表示の微調整 */
 @media (max-width: 600px) {
-    body {
-        padding: 15px;
-    }
-    nav ul {
-        flex-direction: column;
-        gap: 8px;
-        padding-bottom: 10px;
-    }
-    header h1 {
-        font-size: 1.5rem;
-    }
-}
-
-nav a.active {
-    color: var(--accent-gold);
-    border-bottom: 2px solid var(--accent-gold);
+    body { padding: 10px; }
+    nav ul { gap: 12px; }
+    nav a { font-size: 0.85rem; } /* スマホでは少し文字を小さく */
 }
