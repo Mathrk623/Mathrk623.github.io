@@ -3,30 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes - My Math Notes</title>
-    <link rel="stylesheet" href="/style.css"> <!-- CSSの読み込み -->
-    <!-- MathJaxの設定 -->
-    <script>window.MathJax = { tex: { inlineMath: [['$', '$']] } };</script>
+    <title>My Math Notes</title>
+    
+    <!-- CSSの読み込み -->
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- MathJaxの設定（数式用） -->
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+        };
+    </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
+
+<header>
     <h1><a href="/">My Math Notes</a></h1>
     <nav>
         <ul>
-            <li><a href="/" class="${currentPath === '/' ? 'active' : ''}">Home</a></li>
-            <li><a href="/notes/" class="${currentPath.includes('/notes/') ? 'active' : ''}">Notes</a></li>
-            <li><a href="/memo/" class="${currentPath.includes('/memo/') ? 'active' : ''}">Memo</a></li>
-            <li><a href="/resources/" class="${currentPath.includes('/resources/') ? 'active' : ''}">Resources</a></li>
+            <!-- 今いるページの <a> タグに class="active" を付与します -->
+            <li><a href="/memo/">Home</a></li>
+            <li><a href="/notes/">Notes</a></li>
+            <li><a href="/" class="active">Memo</a></li>
+            <li><a href="/resources/">Resources</a></li>
         </ul>
     </nav>
-    <main>
-        <h2>ノート類</h2>
-        <div class="card">
-            <h3>代数学</h3>
-            <ul>
-                <li><a href="/pdfs/algebra1.pdf">群論の基礎.pdf</a></li>
-            </ul>
-        </div>
-    </main>
+</header>
+
+<main>
+    あ
+</main>
+
+<footer>
+    <p>&copy; 2024 Your Name - Built with MathJax & GitHub Pages</p>
+</footer>
+
 </body>
 </html>
