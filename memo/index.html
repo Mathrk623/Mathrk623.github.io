@@ -1,44 +1,137 @@
-<main style="margin-top: 20px;">
-    <h2>メモ・記事一覧</h2>
+<!DOCTYPE html>
+<html lang="ja">
 
-    <!-- イチオシ記事 (コンパクト化) -->
-    <section style="position: relative; margin-top: 30px;">
-        <div class="featured-badge">PICK UP</div>
-        <a href="/memo/cauchy-integral.html" class="post-link">
-            <div class="card featured-post" style="padding: 15px;">
-                <span class="category-tag">複素解析</span>
-                <h3 style="margin: 5px 0;">Cauchyの積分公式の幾何学的理解</h3>
-                <p class="post-summary" style="font-size: 0.85rem; margin: 5px 0;">正則関数の「硬さ」を象徴する公式の直感的なイメージと導出。</p>
-            </div>
-        </a>
-    </section>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memo - My Math Notes</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        /* メモ一覧専用の追加スタイル */
+        .featured-post {
+            border: 2px solid var(--main-blue);
+            background: var(--light-gray);
+            position: relative;
+        }
 
-    <!-- カテゴリ別（1件＋リンク） -->
-    <section>
-        <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--main-black); margin-top: 30px;">
-            <h3 style="margin: 0;">代数学</h3>
-            <a href="/memo/algebra/" style="font-size: 0.8rem; color: var(--main-blue);">代数学の記事をすべて見る &raquo;</a>
-        </div>
-        
-        <a href="/memo/group-isomorphism.html" class="post-link">
-            <div class="card" style="padding: 12px; margin-top: 10px;">
-                <div class="post-meta" style="margin-bottom: 5px;">2026/04/20</div>
-                <h4 style="margin: 0;">群の準同型定理の整理</h4>
-            </div>
-        </a>
-    </section>
+        .featured-badge {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: var(--accent-red);
+            color: white;
+            padding: 2px 10px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            border-radius: 4px;
+        }
 
-    <section>
-        <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--main-black); margin-top: 30px;">
-            <h3 style="margin: 0;">解析学</h3>
-            <a href="/memo/analysis/" style="font-size: 0.8rem; color: var(--main-blue);">解析学の記事をすべて見る &raquo;</a>
-        </div>
-        
-        <a href="/memo/uniform-convergence.html" class="post-link">
-            <div class="card" style="padding: 12px; margin-top: 10px;">
-                <div class="post-meta" style="margin-bottom: 5px;">2026/03/15</div>
-                <h4 style="margin: 0;">項別微分の条件と一様収束</h4>
+        .post-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: 0.2s;
+        }
+
+        .post-link:hover {
+            opacity: 0.8;
+            transform: translateY(-2px);
+        }
+
+        .category-tag {
+            display: inline-block;
+            background: var(--main-blue);
+            color: white;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 3px;
+            margin-bottom: 8px;
+        }
+
+        .post-meta {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .post-summary {
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+        /* カテゴリの見出し */
+        .category-section-title {
+            margin-top: 50px;
+            font-size: 1.4rem;
+            border-bottom: 2px solid var(--main-black);
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1><a href="/">My Math Notes</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/notes/">Notes</a></li>
+                <li><a href="/memo/" class="active">Memo</a></li>
+                <li><a href="/resources/">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main style="margin-top: 20px;">
+        <h2>メモ・記事一覧</h2>
+
+        <!-- イチオシ記事 (コンパクト化) -->
+        <section style="position: relative; margin-top: 30px;">
+            <div class="featured-badge">PICK UP</div>
+            <a href="/memo/cauchy-integral.html" class="post-link">
+                <div class="card featured-post" style="padding: 15px;">
+                    <span class="category-tag">複素解析</span>
+                    <h3 style="margin: 5px 0;">Cauchyの積分公式の幾何学的理解</h3>
+                    <p class="post-summary" style="font-size: 0.85rem; margin: 5px 0;">正則関数の「硬さ」を象徴する公式の直感的なイメージと導出。</p>
+                </div>
+            </a>
+        </section>
+
+        <!-- カテゴリ別（1件＋リンク） -->
+        <section>
+            <div
+                style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--main-black); margin-top: 30px;">
+                <h3 style="margin: 0;">代数学</h3>
+                <a href="/memo/algebra/" style="font-size: 0.8rem; color: var(--main-blue);">代数学の記事をすべて見る &raquo;</a>
             </div>
-        </a>
-    </section>
-</main>
+
+            <a href="/memo/group-isomorphism.html" class="post-link">
+                <div class="card" style="padding: 12px; margin-top: 10px;">
+                    <div class="post-meta" style="margin-bottom: 5px;">2026/04/20</div>
+                    <h4 style="margin: 0;">群の準同型定理の整理</h4>
+                </div>
+            </a>
+        </section>
+
+        <section>
+            <div
+                style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--main-black); margin-top: 30px;">
+                <h3 style="margin: 0;">解析学</h3>
+                <a href="/memo/analysis/" style="font-size: 0.8rem; color: var(--main-blue);">解析学の記事をすべて見る &raquo;</a>
+            </div>
+
+            <a href="/memo/uniform-convergence.html" class="post-link">
+                <div class="card" style="padding: 12px; margin-top: 10px;">
+                    <div class="post-meta" style="margin-bottom: 5px;">2026/03/15</div>
+                    <h4 style="margin: 0;">項別微分の条件と一様収束</h4>
+                </div>
+            </a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Your Name</p>
+    </footer>
+
+</body>
+
+</html>
