@@ -1,14 +1,16 @@
 // 共通のヘッダーを作成する関数
 function createHeader() {
     const header = document.createElement('header');
+    const currentPath = window.location.pathname; // 現在のURLパスを取得
+
     header.innerHTML = `
         <h1><a href="/">My Math Notes</a></h1>
         <nav>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/notes/">Notes</a></li>
-                <li><a href="/memo/">Memo</a></li>
-                <li><a href="/resources/">Resources</a></li>
+                <li><a href="/" class="${currentPath === '/' ? 'active' : ''}">Home</a></li>
+                <li><a href="/notes/" class="${currentPath.includes('/notes/') ? 'active' : ''}">Notes</a></li>
+                <li><a href="/memo/" class="${currentPath.includes('/memo/') ? 'active' : ''}">Memo</a></li>
+                <li><a href="/resources/" class="${currentPath.includes('/resources/') ? 'active' : ''}">Resources</a></li>
             </ul>
         </nav>
     `;
