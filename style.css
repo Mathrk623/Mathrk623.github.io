@@ -45,7 +45,6 @@ nav {
 nav ul { 
     list-style: none; 
     padding: 0 10px; /* 左右に少し遊びを作る */
-    margin: 0;
     display: flex; 
     gap: 20px;
     
