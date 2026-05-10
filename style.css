@@ -17,11 +17,14 @@ body {
 }
 
 header {
-    text-align: center;
     top: 0;
     background-color: #ffffff;
     border-bottom: 2px solid var(--main-black);
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column; /* 縦に並べる */
+    align-items: center;    /* 横方向の中央に揃える */
+    text-align: center;
 }
 
 h1 a {
