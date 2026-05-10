@@ -19,7 +19,7 @@ body {
 header {
     top: 0;
     background-color: #ffffff;
-    z-index: 100; /* ヘッダーを一番手前に */
+    z-index: 10; /* ヘッダーを一番手前に */
     border-bottom: 2px solid var(--main-black);
     margin-bottom: 30px;
 }
