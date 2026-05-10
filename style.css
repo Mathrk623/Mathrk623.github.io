@@ -1,0 +1,78 @@
+:root {
+    --main-black: #222;
+    --main-blue: #020247;      /* 信頼感のある青 */
+    --accent-red: #a50000;     /* 差し色の濃い赤 */
+    --bg-white: #ffffff;
+    --light-gray: #f0f4f8;
+}
+
+body {
+    font-family: 'Times New Roman', 'Hiragino Mincho ProN', serif;
+    line-height: 1.7;
+    color: var(--main-black);
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--bg-white);
+}
+
+header {
+    top: 0;
+    background-color: #ffffff;
+    z-index: 100; /* ヘッダーを一番手前に */
+    border-bottom: 2px solid var(--main-black);
+    margin-bottom: 30px;
+}
+
+h1 a {
+    text-decoration: none;
+    color: var(--main-black);
+}
+
+/* ナビゲーション */
+nav ul { 
+    list-style: none; 
+    padding: 0; 
+    display: flex; 
+    gap: 15px;      /* 間隔を少し詰める */
+    flex-wrap: nowrap; /* 折り返さない */
+    overflow-x: auto;  /* はみ出す場合は横スクロール可能に */
+    -webkit-overflow-scrolling: touch;
+}
+
+nav a { 
+    text-decoration: none; 
+    color: var(--main-blue); 
+    font-weight: bold;
+    white-space: nowrap; /* 文字を改行させない */
+    font-size: 0.95rem;
+}
+
+nav a.active {
+    color: var(--accent-red); /* 今のページを赤に */
+    border-bottom: 2px solid var(--accent-red);
+}
+
+/* コンテンツ */
+h2 { 
+    border-bottom: 1px solid var(--main-blue);
+    color: var(--main-blue);
+    padding-bottom: 5px;
+    margin-top: 40px;
+}
+
+.card { 
+    background: #ffffff; 
+    padding: 20px; 
+    border: 1px solid #d1d9e0; /* 境界線をはっきりさせる */
+    border-radius: 6px;        /* 角を少し丸める */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* 軽い影で浮き出し感 */
+    margin-bottom: 25px;
+    border-left: 5px solid var(--main-blue); /* 左側にアクセントの太線 */
+}
+
+@media (max-width: 600px) {
+    body { padding: 10px; }
+    nav ul { gap: 12px; }
+    nav a { font-size: 0.85rem; } /* スマホでは少し文字を小さく */
+}
