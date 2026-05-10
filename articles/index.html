@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memo - My Math Notes</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        /* メモ一覧専用の追加スタイル */
+        .featured-post {
+            border: 2px solid var(--main-blue);
+            background: var(--light-gray);
+            position: relative;
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: -12px; /* カードの外に少しはみ出させる */
+            left: 15px;
+            background: var(--accent-red);
+            color: white;
+            padding: 2px 12px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            border-radius: 4px;
+            z-index: 10; /* カード(z-index未指定なら0)より上に表示 */
+        }
+
+        .post-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: 0.2s;
+        }
+
+        .post-link:hover {
+            opacity: 0.8;
+            transform: translateY(-2px);
+        }
+
+        .category-tag {
+            display: inline-block;
+            background: var(--main-blue);
+            color: white;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 3px;
+            margin-bottom: 8px;
+        }
+
+        .post-meta {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .post-summary {
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+        /* カテゴリの見出し */
+        .category-section-title {
+            margin-top: 50px;
+            font-size: 1.4rem;
+            border-bottom: 2px solid var(--main-black);
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1><a href="/">Mark6</a></h1>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/profile/">Profile</a></li>
+            <li><a href="/activities/" class="active">Activities</a></li>
+            <li><a href="/articles/">Articles</a></li>
+            <li><a href="/notes/">Notes</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main style="margin-top: 20px;">
+    <h2>メモ・記事一覧</h2>
+    <section style="position: relative; margin-top: 30px;">
+        <div class="featured-badge">PICK UP</div>
+        <a href="/articles/CommAlg/MatlisDuality/index.html" class="post-link">
+            <div class="card featured-post" style="padding: 15px;">
+                <span class="category-tag">可換代数</span>
+                <h3 style="margin: 5px 0;">Matlis Duality</h3>
+                <p class="post-summary" style="font-size: 0.85rem; margin: 5px 0;">Matlis Duality の主張を書きました（テスト）</p>
+            </div>
+        </a>
+    </section>
+    <section>
+        <div
+            style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--main-black); margin-top: 30px;">
+            <h3 style="margin: 0;">可換代数</h3>
+            <a href="/memo/algebra/" style="font-size: 0.8rem; color: var(--main-blue);">代数学の記事をすべて見る &raquo;</a>
+        </div>
+        <a href="/articles/CommAlg/MatlisDuality/index.html" class="post-link">
+            <div class="card" style="padding: 12px; margin-top: 10px;">
+                <div class="post-meta" style="margin-bottom: 5px;">2026/05/10</div>
+                <h4 style="margin: 0;">Matlis Duality</h4>
+            </div>
+        </a>
+    </section>
+    <section>
+        <div
+            style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--main-black); margin-top: 30px;">
+            <h3 style="margin: 0;">代数幾何</h3>
+            <a href="/memo/analysis/" style="font-size: 0.8rem; color: var(--main-blue);">解析学の記事をすべて見る &raquo;</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Mark6 - Built with MathJax & GitHub Pages</p>
+</footer>
+
+</body>
+
+</html>
