@@ -1,0 +1,83 @@
+a
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matlis Duality - Mark6</title>
+    <link rel="stylesheet" href="/style.css">
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+<header>
+    <h1><a href="/">Mark6</a></h1>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/profile/">Profile</a></li>
+            <li><a href="/activities/">Activities</a></li>
+            <li><a href="/articles/" class="active">Articles</a></li>
+            <li><a href="/notes/">Notes</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <article>
+        <p class="post-date" style="color: #666; font-size: 0.9rem;">公開日: 2026/05/10</p>
+        <h2>Matlis Duality</h2>
+        
+        <div class="card">
+            <p>Matlis Duality の主張を書きます。（これは仮置きであり、適当な記事を書き次第たぶん削除します。）</p>
+            
+            <h3>定理の主張</h3>
+            <p>
+                $(A,\mathfrak{m},k)$を Noether 局所環とし、
+                <ul>
+                    <li>$\mathcal{C}$：有限長$A$加群がなす圏</li>
+                    <li>$\mathcal{D}$：Artin$A$加群がなす圏</li>
+                    <li>$\mathcal{E}$：Noether$\hat{A}$加群がなす圏</li>
+                </ul>
+                とする（$\hat{A}$は$A$の$\mathfrak{m}$進完備化）。$E_A(k)$で$E$の$A$加群としての入射包絡を表す。
+            </p>
+            <p>
+                このとき
+                <ul>
+                    <li>$E_A(k)=E_{\hat{A}}(k)$である。これを$E$とおく。</li>
+                    <li>反変関手
+                    $$\mathrm{Hom}_A(-,E_A(k)):\mathcal{D}\to\mathcal{E}$$
+                    および
+                    $$\mathrm{Hom}_{\hat{A}}(-,E_{\hat{A}}(k)):\mathcal{E}\to\mathcal{D}$$
+                    は互いに逆関手であり、$\mathcal{D}$と$\mathcal{E}$の反変同値を与える。</li>
+                    <li>さらに、$\mathcal{C}$へ制限すると、反変関手
+                    $$\mathrm{Hom}_A(-,E):\mathcal{C}\to\mathcal{C}$$
+                    は自身が逆関手であり、$\mathcal{C}$の自己反変同値を与える。</li>
+                </ul>
+            </p>
+            <figure style="text-align: center;">
+                <img src="/articles/CommAlg/MatlisDuality/Fig1.png" alt="Matlis Duality の図解" style="max-width: 100%; height: auto;">
+                <figcaption style="font-size: 0.8em; color: #666;">Matlis Duality の図解</figcaption>
+            </figure>
+        </div>
+
+        <div class="card">
+            <a href="/pdfs/§18. Gorenstein環.pdf">§18. Gorenstein環</a>に、Matlis Duality の証明を含め Gorenstein 環の諸々を書いています。
+            <h3>参考文献</h3>
+            <p>1. 松村 英之, 「復刊 可換環論」, 共立出版, 2000年</p>
+            <p>2. Craig Huneke, Lectures on Local Cohomology, <a href="https://homepages.math.uic.edu/~bshipley/huneke.pdf">https://homepages.math.uic.edu/~bshipley/huneke.pdf</a></p>
+        </div>
+
+        <p><a href="/articles/CommAlg/">&larr; メモ一覧へ戻る</a></p>
+    </article>
+</main>
+
+<footer>
+    <p>&copy; 2026 Your Name</p>
+</footer>
+
+</body>
+</html>
