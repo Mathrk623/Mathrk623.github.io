@@ -1,7 +1,7 @@
 :root {
     --main-black: #222;
-    --main-blue: #020247;      /* 信頼感のある青 */
-    --accent-red: #a50000;     /* 差し色の濃い赤 */
+    --main-blue: #020247;
+    --accent-red: #a50000;
     --bg-white: #ffffff;
     --light-gray: #f0f4f8;
 }
@@ -23,13 +23,13 @@ header {
     margin-bottom: 30px;
     padding-bottom: 20px;
     display: flex;
-    flex-direction: column; /* 縦に並べる */
-    align-items: center;    /* 横方向の中央に揃える */
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
 header h1 {
-    margin-bottom: 10px; /* タイトルとメニューの間の余白 */
+    margin-bottom: 10px;
 }
 
 h1 a {
@@ -42,9 +42,9 @@ nav ul {
     list-style: none; 
     padding: 0; 
     display: flex; 
-    gap: 20px;       /* 項目間の幅を少し広めに */
-    justify-content: center; /* メニュー項目自体を中央寄せ */
-    flex-wrap: wrap; /* スマホで入り切らない場合に折り返す */
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav a { 
@@ -68,15 +68,15 @@ h2 {
 .card { 
     background: #ffffff; 
     padding: 20px; 
-    border: 1px solid #d1d9e0; /* 境界線をはっきりさせる */
-    border-radius: 6px;        /* 角を少し丸める */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* 軽い影で浮き出し感 */
+    border: 1px solid #d1d9e0;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     margin-bottom: 25px;
-    border-left: 5px solid var(--main-blue); /* 左側にアクセントの太線 */
+    border-left: 5px solid var(--main-blue);
 }
 
 @media (max-width: 600px) {
     nav ul {
-        gap: 12px;   /* スマホでは少し詰める */
+        gap: 12px;
     }
 }
