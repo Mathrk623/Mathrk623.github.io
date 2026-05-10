@@ -17,6 +17,7 @@ body {
 }
 
 header {
+    text-align: center;
     top: 0;
     background-color: #ffffff;
     border-bottom: 2px solid var(--main-black);
