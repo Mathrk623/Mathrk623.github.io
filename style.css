@@ -21,6 +21,7 @@ header {
     background-color: #ffffff;
     border-bottom: 2px solid var(--main-black);
     margin-bottom: 30px;
+    padding-bottom: 20px;
     display: flex;
     flex-direction: column; /* 縦に並べる */
     align-items: center;    /* 横方向の中央に揃える */
@@ -37,42 +38,25 @@ h1 a {
 }
 
 /* ナビゲーション */
-nav {
-    width: 100%; /* ナビゲーションの幅を確保 */
-    display: flex;
-    justify-content: center; /* 2. 項目を中央から並べる */
-}
 nav ul { 
     list-style: none; 
-    padding: 0 10px; /* 左右に少し遊びを作る */
+    padding: 0; 
     display: flex; 
-    gap: 20px;
-    
-    /* 3. 折り返さず、はみ出た分はスクロールさせる設定 */
-    flex-wrap: nowrap; 
-    overflow-x: auto; 
-    -webkit-overflow-scrolling: touch; /* iOSでのスクロールを滑らかに */
-    
-    /* スクロールバーを隠す（デザイン優先の場合） */
-    scrollbar-width: none; /* Firefox用 */
-}
-
-nav ul::-webkit-scrollbar {
-    display: none;
+    gap: 20px;       /* 項目間の幅を少し広めに */
+    justify-content: center; /* メニュー項目自体を中央寄せ */
+    flex-wrap: wrap; /* スマホで入り切らない場合に折り返す */
 }
 
 nav a { 
     text-decoration: none; 
     color: var(--main-blue); 
     font-weight: bold;
-    white-space: nowrap; /* 4. 文字自体も改行させない */
 }
 
 nav a.active {
-    color: var(--accent-red); /* 今のページを赤に */
+    color: var(--accent-red);
     border-bottom: 2px solid var(--accent-red);
 }
-
 /* コンテンツ */
 h2 { 
     border-bottom: 1px solid var(--main-blue);
@@ -92,7 +76,7 @@ h2 {
 }
 
 @media (max-width: 600px) {
-    body { padding: 10px; }
-    nav ul { gap: 12px; }
-    nav a { font-size: 0.85rem; } /* スマホでは少し文字を小さく */
+    nav ul {
+        gap: 12px;   /* スマホでは少し詰める */
+    }
 }
