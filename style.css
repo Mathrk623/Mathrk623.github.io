@@ -36,7 +36,10 @@ h1 a {
     text-decoration: none;
     color: var(--main-black);
 }
-
+h2 a {
+    text-decoration: none;
+    color: var(--main-black);
+}
 /* ナビゲーション */
 nav ul { 
     list-style: none; 
