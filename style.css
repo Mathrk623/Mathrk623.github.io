@@ -1,19 +1,9 @@
 :root {
     --main-black: #222;
-    --main-blue: #020247;
-    --accent-red: #a50000;
-    /* 背景用の薄い青：目に優しい、数学のノートのような清潔な色 */
-    --bg-blue: #f0f5fa; 
-    --card-white: #ffffff;
-}
-
-/* ページ全体の設定 */
-html, body {
-    /* リロードの挙動を安定させるため、余計なオーバーフロー設定を避ける */
-    overscroll-behavior-y: contain; 
-    background-color: var(--bg-blue);
-    margin: 0;
-    padding: 0;
+    --main-blue: #020247;      /* 信頼感のある青 */
+    --accent-red: #a50000;     /* 差し色の濃い赤 */
+    --bg-white: #ffffff;
+    --light-gray: #f0f4f8;
 }
 
 body {
@@ -23,65 +13,65 @@ body {
     max-width: 850px;
     margin: 0 auto;
     padding: 20px;
+    background-color: var(--bg-white);
 }
 
-/* ヘッダー：リロードの邪魔をしないよう設定 */
 header {
-    /* stickyをやめて、最上部に固定する通常配置に戻すとリロードが安定します */
-    background-color: transparent; /* 背景色に馴染ませる */
+    top: 0;
+    background-color: #ffffff;
     border-bottom: 2px solid var(--main-black);
     margin-bottom: 30px;
-    padding-bottom: 10px;
 }
 
-header h1 a {
+h1 a {
     text-decoration: none;
     color: var(--main-black);
 }
 
-/* カードのデザイン：背景が薄い青なので、白が際立ちます */
-.card { 
-    background: var(--card-white); 
-    padding: 20px; 
-    border: 1px solid #d1d9e0; 
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 74, 153, 0.05); /* 影にも少し青を混ぜる */
-    margin-bottom: 25px;
-    border-left: 5px solid var(--main-blue);
-    position: relative; /* バッジの基準点 */
-}
-
-/* PICK UP バッジの修正：z-indexを調整 */
-.featured-badge {
-    position: absolute;
-    top: -12px;
-    left: 15px;
-    background: var(--accent-red);
-    color: white;
-    padding: 2px 12px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    border-radius: 4px;
-    z-index: 1; /* カード内での重なり順 */
-}
-
-/* スマホ表示のナビゲーションをより使いやすく */
+/* ナビゲーション */
 nav ul { 
     list-style: none; 
     padding: 0; 
     display: flex; 
-    gap: 15px;
-    overflow-x: auto;
-    white-space: nowrap;
+    gap: 15px;      /* 間隔を少し詰める */
+    flex-wrap: nowrap; /* 折り返さない */
+    overflow-x: auto;  /* はみ出す場合は横スクロール可能に */
+    -webkit-overflow-scrolling: touch;
 }
 
 nav a { 
     text-decoration: none; 
     color: var(--main-blue); 
     font-weight: bold;
+    white-space: nowrap; /* 文字を改行させない */
+    font-size: 0.95rem;
 }
 
 nav a.active {
-    color: var(--accent-red);
+    color: var(--accent-red); /* 今のページを赤に */
     border-bottom: 2px solid var(--accent-red);
+}
+
+/* コンテンツ */
+h2 { 
+    border-bottom: 1px solid var(--main-blue);
+    color: var(--main-blue);
+    padding-bottom: 5px;
+    margin-top: 40px;
+}
+
+.card { 
+    background: #ffffff; 
+    padding: 20px; 
+    border: 1px solid #d1d9e0; /* 境界線をはっきりさせる */
+    border-radius: 6px;        /* 角を少し丸める */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* 軽い影で浮き出し感 */
+    margin-bottom: 25px;
+    border-left: 5px solid var(--main-blue); /* 左側にアクセントの太線 */
+}
+
+@media (max-width: 600px) {
+    body { padding: 10px; }
+    nav ul { gap: 12px; }
+    nav a { font-size: 0.85rem; } /* スマホでは少し文字を小さく */
 }
