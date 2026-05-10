@@ -27,28 +27,46 @@ header {
     text-align: center;
 }
 
+header h1 {
+    margin-bottom: 10px; /* タイトルとメニューの間の余白 */
+}
+
 h1 a {
     text-decoration: none;
     color: var(--main-black);
 }
 
 /* ナビゲーション */
+nav {
+    width: 100%; /* ナビゲーションの幅を確保 */
+    display: flex;
+    justify-content: center; /* 2. 項目を中央から並べる */
+}
 nav ul { 
     list-style: none; 
-    padding: 0; 
+    padding: 0 10px; /* 左右に少し遊びを作る */
+    margin: 0;
     display: flex; 
-    gap: 15px;      /* 間隔を少し詰める */
-    flex-wrap: nowrap; /* 折り返さない */
-    overflow-x: auto;  /* はみ出す場合は横スクロール可能に */
-    -webkit-overflow-scrolling: touch;
+    gap: 20px;
+    
+    /* 3. 折り返さず、はみ出た分はスクロールさせる設定 */
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; /* iOSでのスクロールを滑らかに */
+    
+    /* スクロールバーを隠す（デザイン優先の場合） */
+    scrollbar-width: none; /* Firefox用 */
+}
+
+nav ul::-webkit-scrollbar {
+    display: none;
 }
 
 nav a { 
     text-decoration: none; 
     color: var(--main-blue); 
     font-weight: bold;
-    white-space: nowrap; /* 文字を改行させない */
-    font-size: 0.95rem;
+    white-space: nowrap; /* 4. 文字自体も改行させない */
 }
 
 nav a.active {
