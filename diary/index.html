@@ -6,6 +6,18 @@
     <title>Mark6</title>
     
     <link rel="stylesheet" href="/style.css">
+    <style>
+        .card { 
+            background: #ffffff; 
+            padding: 20px; 
+            border: 1px solid #d1d9e0;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+            border-left: 5px solid var(--main-blue);
+            font-size: 80%;
+        }
+    </style>
 
     <script>
         window.MathJax = {
@@ -34,13 +46,54 @@
     <h2>2026年5月</h2>
 
     <section>
+        <h3>5/25（月）</h3>
+        <div class="card-small">
+            <p>
+                今日から、<a href="https://syllabus.s.isct.ac.jp/courses/2026/1/1-11-411111-0-0/202603881" target="_blank">Cohomological Hall Algebra（CoHA）に関する金城先生の集中講義</a>に潜る。
+                初回である今回は
+                <ul>
+                    <li>§0：講義全体の概説</li>
+                    <li>§1：algebraic stack あたりまでの基礎的な定義</li>
+                    <li>§2：Localization formula の証明</li>
+                </ul>
+                という流れだった。
+            </p>
+            <p>
+                かなり無知なまま講義に突っ込んだので、この講義の主題でない部分にもすでにたくさんの激アツポイントがあり、勉強になった。個人的には、
+                Dynkin quiver $Q$ に付随する Lie 代数の量子群の positive part $U_q(\mathfrak{n}^+)$ が、
+                $Q$ の表現の Abel 圏 $\mathrm{Rep}(Q)$ における $\mathrm{Ext}$ の情報を結合定数とすることで構成される Ringel Hall algebra に一致するという対応は、
+                なんか凄いこと言ってるなぁと思いつつ、不勉強でそれ以上の感想が出ず悔しい。（多分こういうことはこの講義のモチベづけであって、今更すごいなぁと思っているのは遅いのだが）
+            </p>
+            <p>
+                また、§2の途中で出てきた intersection theory とのアナロジーも、そもそもスキームレベルでの DNC への理解が浅く、ふぅんとしか思えなかった。
+                最近常に intersection theory で躓いており、聴講するにしても、もっと勉強しなければ...と思っている。
+            </p>
+            <p>
+                §2の最後では torus 作用に関する equivariant cohomology の積分公式？である Localization formula が証明され、それを $(\mathbb{C}^*)^{n+1}\curvearrowright\mathbb{P}^n$ に適用することで
+                $$\sum_{i=0}^n\frac{z_i^n}{\prod_{j\neq i}(z_i-z_j)}=1$$
+                という初等的な式が証明できるという演習が述べられて面白かった。
+            </p>
+            <p>
+                また、
+                <ul>
+                    <li>数え上げ幾何と弦理論（Katz）</li>
+                    <li>数え上げ幾何学講義　シューベルト・カルキュラス入門（池田）</li>
+                    <li>代数多様体論（川又）</li>
+                    <li>高次元代数多様体論（川又）</li>
+                </ul>
+                （敬称略）を図書館で借りた。数え上げ方向に進むのか、双有理方向に進むのか、自分でも分からず迷走している。
+                今のところモジュライまわりは面白そうだと思えているが、目移りしすぎるのは良くないだろうか。
+            </p>
+        </div>
+    </section>
+    <section>
         <h3>5/24（日）</h3>
-        <div class="card">
+        <div class="card-small">
             <p>
                 今日は向井先生のモジュライ理論Ⅱを読んだ。ベクトル束のモジュライのあたりまで一通り目を通したがかなり面白かった。技術的な部分をかなり省きながら読んでしまったので、具体例が手になじむまでもう少し読み込んでいこうと思う。
             </p>
             <p>
-                もともとは Bridgeland 安定性についての Li の論文が出た時期に「なにそれ」と思って安定性を調べ始めたのだが、数物セミナーで複素微分幾何のK安定性についての話を聞いて本格的に興味が湧き、最近は（slope）安定性や、不可分であるところのモジュライの理論について勉強している。
+                もともとは Bridgeland 安定性についての Li の論文が出た時期に「なにそれ」と思って安定性を調べ始めたのだが、数物セミナーで複素微分幾何のK安定性についての話を聞いて本格的に興味が湧き、最近は（slope）安定性や、不可分であるところのモジュライの理論について勉強している。
                 このあたりは、古典的な代数多様体の基礎か Riemann 面の話を学んだら、次に触れてみるべき話題なのではないだろうか。面白いのでもっと積極的に周りにも布教していきたいし、勉強次第記事なども書きたい。
             </p>
             <p>
@@ -50,7 +103,7 @@
     </section>
     <section>
         <h3>5/21（木）</h3>
-        <div class="card">
+        <div class="card-small">
             <p> 日記ページを新設した。 </p>
             <p>
                 今日は Huybrechts の Fourier-Mukai Transforms in Algebraic Geometry のゼミがあり、連接層の導来圏の基本事項について発表した。「連接層の導来圏の構造にはもとの空間の幾何学が反映されている」というアイデアを感じられる命題がいくつかあり、ようやく始まったなぁ！ と嬉しくなってしまった。
