@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>読書記録 - Mark6</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1><a href="/">Mark6</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/notes/">Notes</a></li>
+                <li><a href="/articles/" class="active">Articles</a></li>
+                <li><a href="/diary/">Diary</a></li>
+                <li><a href="/profile/">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="math-article">
+            <h1 class="book-title">数え上げ幾何学講義　シューベルト・カルキュラス入門</h1>
+            <div class="meta-info">最終更新：2026/05/29</div>
+    
+            <h2>書籍情報</h2>
+            <ul>
+                <li><strong>著者：</strong> 池田　岳</li>
+                <li><strong>出版社：</strong> 東京大学出版会</li>
+                <li><strong>リンク：</strong> <a href="https://www.utp.or.jp/book/b370990.html" target="_blank"
+                        rel="noopener">東京大学出版会</a></li>
+            </ul>
+    
+            <h2>概要と前提知識</h2>
+            <ul>
+                <li><strong>分野：</strong>数え上げ幾何学</li>
+                <li><strong>前提知識の目安：</strong> おそらく基礎的な線形代数くらい。</li>
+            </ul>
+            <p>
+                数え上げ幾何学の厳密な展開には交叉理論が必要だが、この本は技術的に込み入った部分は適宜 <a href="https://doi.org/10.1007/978-1-4612-1700-8">Fulton,
+                    Intersection Theory</a> などの参考文献に投げることで、代数幾何の知識なしで例えば「$\mathbb{P}^3$
+                内の滑らかな３次曲面に含まれる直線はちょうど27本である」ことなどを実際に計算して楽しめるようになっている。Young 図形や Schur 多項式などの組み合わせ論的な概念が中心的な役割を担う。めちゃくちゃ面白い。
+            </p>
+            <h2>章ごとの内容紹介・学習メモ</h2>
+    
+            <h3>第Ⅰ部　グラスマン多様体とシューア多項式</h3>
+            <p>そもそも、「ある条件を満たすような図形はいくつ存在するか」という問題は、条件を外した図形全体がなす多様体において、条件を満たす図形全体がなす部分多様体の大きさを知ることができればよい。例えば、
+    
+            <div class="card">
+                <h4>問題</h4>
+                <ul>
+                    <li>$\mathbb{P}^4$ 内の2つの2次超曲面 $X_1, X_2$ にともに含まれる直線は何本か。</li>
+                </ul>
+            </div>
+    
+            を考えるのであれば、
+    
+            <div class="card">
+                <h4>解答の方針</h4>
+                <ol>
+                    <li>$\mathbb{P}^4$ 内の直線全体がなす多様体 $M$ を用意する。</li>
+                    <li>$X_1$ に含まれる直線全体がなす部分多様体 $N_1\subset M$ を求める。<br>$X_2$ に含まれる直線全体がなす部分多様体 $N_2\subset M$ を求める。</li>
+                    <li>$M$ の中で $N_1$ と $N_2$ の適切な意味での交叉を数え上げる。</li>
+                </ol>
+            </div>
+    
+            という流れで解かれるだろう。（一般の問題において 1. を担うのが moduli であり、3. を担うのが交叉理論である。）<br>直線の数え上げの場合は $M$ は <storng>Grassmann 多様体
+            </storng> と呼ばれる対象になり、1. における構成は容易である。第Ⅰ部はこの場合における 1. と 3. 半分の解説である。
+            </p>
+            <div class="card">
+                <h4>理解メモ</h4>
+                <ul>
+                    <li>直線に対する条件全体の中で、ある意味で基底的な役割を果たす条件群が存在する。それらは実は <strong>Young 図形</strong> で添え字付けることができる。</li>
+                    $$\text{Young 図形}\mapsto\text{条件}$$
+                    <li>直線に対する条件が与えられれば、それを満たす直線全体、という Grassmann 多様体の部分多様体が定まる。</li>
+                    $$\text{条件}\mapsto\{\text{その条件を満たす直線全体}\}\subset\text{Grassmann 多様体}$$
+                    <li>以上を合わせると、Young 図形で添え字付けられた Grassmann 多様体の部分多様体たちが得られる。
+                        $$\text{Young 図形}~\lambda\mapsto\Omega_\lambda^\circ\subset\Omega_\lambda\subset\text{Grassmann多様体}$$
+                        これらは Grassmann 多様体の胞体分割を与えており、<strong>Schubert 胞体, Schubert 多様体</strong>
+                        と呼ばれる。</li>
+                    <li>3. のためにSchubert 胞体どうしの交叉理論（＝交叉の公式）を確立したいわけだが、ここで組み合わせ論的な道具が大活躍する。結果として <strong>Pieri の規則</strong> や
+                        <strong>Giambelli の公式</strong> が導かれる。前者は <strong>Schur 多項式</strong> によって、後者は行列式によって書かれる。
+                    </li>
+                </ul>
+            </div>
+    
+            <h3>第Ⅱ部　チャーン類とその応用</h3>
+            <p>この章では、上の問題で言うところの 2. について解説されたのち、いくつかの数え上げの問題に実際に解答が与えられる。</p>
+            <div class="card">
+                <h4>2. についての観察</h4>
+                <ul>
+                    <li>「直線が曲面に含まれる」という条件の意味するところを、Grassmann 多様体上に移植しなければならない。曲面の定義多項式を2次多項式 $f, g$ とする。これは
+                        $O_{\mathbb{P}^4}(2)$ の大域切断とみなせる。すなわち問題で与えられているものは
+                    </li>
+                    $$f,g\in\Gamma(O_{\mathbb{P}^4}(2))$$
+                    であり、数えるべきは、$f$ の零点集合を $Z(f)$ と書くことにすれば
+                    $$\#\{\ell\subset\mathbb{P}^4\mid\ell\subset Z(f)\cap Z(g)\}$$
+                    である。
+                    <li>直線 $\ell\subset\mathbb{P}^3$ が $Z(f)$ に含まれることは、$f|_\ell\equiv0$ と同値である。よって、$f$
+                        の零点集合に含まれる直線全体というのは、対応　$\ell\mapsto f|_\ell$ の「零点集合」である。
+                    </li>
+                    $$\{\ell\mid\ell\subset Z(f)\}=\{\ell\mid f|_\ell\equiv0\}$$
+                    $$\{\ell\mid\ell\subset Z(g)\}=\{\ell\mid g|_\ell\equiv0\}$$
+                    $$\{\ell\mid\ell\subset Z(f)\cap Z(g)\}=\{\ell\mid f|_\ell\equiv0\}\cap\{\ell\mid g|_\ell\equiv0\}$$
+                    <li>Grassmann 多様体上の $O(-1)$ に相当する <strong>普遍部分束</strong> $\mathscr{S}$ を用いると、$s_f:\ell\mapsto f|_\ell$ は
+                        $\mathrm{Sym}^2(\mathscr{S}^\vee)$ の大域切断とみなせることが分かる。「零点集合」は $s_f$ の <strong>零軌跡（zero locus）</strong>
+                        と呼ばれ、$Z(s_f)$ と書かれる。</li>すなわち与えられているものは
+                    $$s_f,s_g\in\Gamma(\mathrm{Sym}^2(\mathscr{S}^\vee))$$
+                    であり、数えるべきものは
+                    $$\#Z(s_f)\cap Z(s_g)$$
+                    という、Grassmann 多様体内の交叉の点の個数である！
+                </ul>
+            </div>
+            <p>
+                問題をいちど一般化してみる。$\mathrm{Sym}^2(\mathscr{S}^\vee)$ は Grassmann 多様体上のベクトル束なので、ここを一般のものに置き換える。
+            <div class="card">
+                <h4>問題</h4>
+                <ul>
+                    <li>多様体 $X$ と $X$ 上のベクトル束が与えられたときに、$\mathscr{E}$ の大域切断
+                        $$s\in\Gamma(\mathscr{E})$$
+                        の零軌跡
+                        $$Z(s)$$
+                        の交叉理論を作れ。</li>
+                </ul>
+            </div>
+            実は $\mathscr{E}$ の大域切断としてはどれを選んでも交叉理論は変わらないことが知られている。すなわち、大域切断を選ばずとも
+            <div style="text-align:center">ベクトル束 $\mapsto$ その大域切断の零軌跡の交叉理論</div>
+            という対応が存在するはずである。この写像は <strong>Chern 類</strong> と呼ばれる。
+            </p>
+            <p>Chern 類に関する交叉理論は、<strong>分裂原理（Splitting Principle）</strong>によって Schubert 胞体の交叉理論に帰着した後、第Ⅰ部で示した Pieri
+                の規則などを用いて計算される。（もっとも、厳密に展開するにはそれこそ代数幾何をしっかりやらなければならないが。）</p>
+            <h3>第Ⅲ部　旗多様体とシューベルト多項式</h3>
+            <p>今までは射影空間の直線（＝線形空間の2次元線形部分空間）全体、すなわち
+                $$(0\subset)\quad V^2 \quad(\subset\mathbb{C}^n)$$
+                （$\dim V^2=2$）という対象を扱ってきたが、ここからは
+                $$(0\subset)V^1\subset V^2\subset \cdots\subset V^{n-1}(\subset\mathbb{C}^n)$$
+                （$\dim V^i=i$）という対象（<strong>旗</strong>）を扱うことになる。
+            </p>
+            <p>対象全体がなす多様体は Grassmann 多様体から <strong>旗多様体</strong> に置き換わり、胞体の添え字付けは Young 図形から <strong>対称群</strong> に置き換わる。Schur 多項式に相当する概念として <strong>Schubert 多項式</strong> というものがあり、旗の固定次元の成分を取り出すことで定まる旗多様体から Grassmann 多様体への写像を通してうまく対応していることが分かる。</p>
+            <h2>全体の感想・これから読む人へ</h2>
+            <p>
+                非常に面白かった。Schubert 多項式についての知識が必要になったため読んだのだが、それに限らず数え上げの toy model のような部分で存分に楽しむことができる。
+            </p>
+            <p>
+                個人的には Fulton の交叉理論のモチベーションがいまいちつかめず苦しんでいたので、このように厳密な構成や証明を適宜飛ばしながら目的意識をもって読める本を読めてよかった。組み合わせ論的な部分は対話形式の丁寧な説明とたくさんの図があるので、これからも戻ってくることになりそう。
+            </p>
+    
+            <footer class="back-footer">
+                <a href="/articles/Reads/">← articles一覧へ戻る</a>
+            </footer>
+        </article>
+    </main>
+</body>
+
+</html>
