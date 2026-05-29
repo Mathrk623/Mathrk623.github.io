@@ -83,3 +83,87 @@ h2 {
         gap: 12px;
     }
 }
+
+/* ==========================================================================
+   数学書読書記録用（.math-article 内限定スタイル）
+   ========================================================================== */
+
+/* 記事全体のコンテナ */
+.math-article {
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+/* 読書記録内のH1（本のタイトル） */
+.math-article h1.book-title {
+    font-size: 1.8rem;
+    color: var(--main-black);
+    text-align: left; /* 中央寄せにせず、論文のように左寄せに */
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* 投稿日などのメタ情報 */
+.math-article .meta-info {
+    font-size: 0.9rem;
+    color: #666666;
+    margin-bottom: 30px;
+}
+
+/* 読書記録内のH2（書籍情報、章ごとの見出しなど） */
+/* 既存のh2の「下線・ネイビー」を継承しつつ、マージンを微調整 */
+.math-article h2 {
+    margin-top: 45px;
+    margin-bottom: 15px;
+}
+
+/* 読書記録内のH3（第1章、第2章など） */
+.math-article h3 {
+    font-size: 1.2rem;
+    color: var(--main-black);
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding-left: 8px;
+    border-left: 3px solid var(--main-blue); /* 控えめなアクセント線 */
+}
+
+/* 読書記録内のH4（学習メモなど） */
+.math-article h4 {
+    font-size: 1.05rem;
+    color: var(--main-black);
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+/* 箇条書き（基本データやメモ）の調整 */
+.math-article ul {
+    padding-left: 20px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+.math-article li {
+    margin-bottom: 6px;
+}
+
+/* 概要などの段落テキスト */
+.math-article p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: justify; /* 日本語の端を綺麗に揃える */
+}
+
+/* リンクの色を既存のメインブルーに合わせる */
+.math-article a {
+    color: var(--main-blue);
+}
+.math-article a:hover {
+    text-decoration: underline;
+}
+
+/* ページ下部の戻るリンク */
+.math-article .back-footer {
+    margin-top: 60px;
+    padding-top: 15px;
+    border-top: 1px dashed #d1d9e0;
+}
