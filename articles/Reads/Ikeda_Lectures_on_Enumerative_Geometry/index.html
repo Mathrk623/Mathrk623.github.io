@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>読書記録 - Mark6</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
     <script>
         window.MathJax = { tex: { inlineMath: [['$', '$']] } };
     </script>
@@ -80,11 +80,11 @@
                 <h4>理解メモ</h4>
                 <ul>
                     <li>直線に対する条件全体の中で、ある意味で基底的な役割を果たす条件群が存在する。それらは実は <strong>Young 図形</strong> で添え字付けることができる。</li>
-                    $$\text{Young 図形}\mapsto\text{条件}$$
+                    <div style="text-align:center">Young 図形 $\mapsto$ 条件</div>
                     <li>直線に対する条件が与えられれば、それを満たす直線全体、という Grassmann 多様体の部分多様体が定まる。</li>
-                    $$\text{条件}\mapsto\{\text{その条件を満たす直線全体}\}\subset\text{Grassmann 多様体}$$
+                    <div>条件 $\mapsto\{$ その条件を満たす直線全体 $\}\subset$ Grassmann 多様体</div>
                     <li>以上を合わせると、Young 図形で添え字付けられた Grassmann 多様体の部分多様体たちが得られる。
-                        $$\text{Young 図形}~\lambda\mapsto\Omega_\lambda^\circ\subset\Omega_\lambda\subset\text{Grassmann多様体}$$
+                        <div style="text-align:center">Young 図形 $\lambda\mapsto\Omega_\lambda^\circ\subset\Omega_\lambda\subset$ Grassmann 多様体</div>
                         これらは Grassmann 多様体の胞体分割を与えており、<strong>Schubert 胞体, Schubert 多様体</strong>
                         と呼ばれる。</li>
                     <li>3. のためにSchubert 胞体どうしの交叉理論（＝交叉の公式）を確立したいわけだが、ここで組み合わせ論的な道具が大活躍する。結果として <strong>Pieri の規則</strong> や
@@ -125,7 +125,7 @@
             <div class="card">
                 <h4>問題</h4>
                 <ul>
-                    <li>多様体 $X$ と $X$ 上のベクトル束が与えられたときに、$\mathscr{E}$ の大域切断
+                    <li>多様体 $X$ と $X$ 上のベクトル束$\mathscr{E}$が与えられたときに、$\mathscr{E}$ の大域切断
                         $$s\in\Gamma(\mathscr{E})$$
                         の零軌跡
                         $$Z(s)$$
@@ -136,7 +136,7 @@
             <div style="text-align:center">ベクトル束 $\mapsto$ その大域切断の零軌跡の交叉理論</div>
             という対応が存在するはずである。この写像は <strong>Chern 類</strong> と呼ばれる。
             </p>
-            <p>Chern 類に関する交叉理論は、<strong>分裂原理（Splitting Principle）</strong>によって Schubert 胞体の交叉理論に帰着した後、第Ⅰ部で示した Pieri
+            <p>Chern 類に関する交叉理論は、<strong>分裂原理 （Splitting Principle）</strong>によって Schubert 胞体の交叉理論に帰着した後、第Ⅰ部で示した Pieri
                 の規則などを用いて計算される。（もっとも、厳密に展開するにはそれこそ代数幾何をしっかりやらなければならないが。）</p>
             <h3>第Ⅲ部　旗多様体とシューベルト多項式</h3>
             <p>今までは射影空間の直線（＝線形空間の2次元線形部分空間）全体、すなわち
