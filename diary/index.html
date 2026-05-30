@@ -44,7 +44,83 @@
 
 <main>
     <h2>2026年5月</h2>
-    
+    <section>
+        <h3>5/29（金）</h3>
+        <div class="card-small">
+            <p>
+                <a href="/articles/Reads/Ikeda_Lectures_on_Enumerative_Geometry/index.html">「数え上げ幾何学講義　シューベルト・カルキュラス入門」（池田岳先生）の読書記録</a>を書いた。記録はどうでもよいのだが、この本は本当に面白いので読んだ方がいい。Young 図形や Jacobi-Trudi 公式などの組み合わせ論的な議論が好きな人にもお勧めしたい。
+            </p>
+            <p>
+                集中講義５日目。
+                <ul>
+                    <li>§6：２次元圏の CoHA</li>
+                    <li>§7：３次元 Calabi-Yau 圏の CoHA と余積</li>
+                </ul>
+                次元というのはホモロジカル次元のことを言う。以下しばらく日記というより面白いパートの抜粋書き起こしになってしまっている。昨日までより詳細な証明が減った分面白いお話が多く、膨れ上がってしまった。
+            </p>
+            <p>
+                ２次元についてはふたつ例があり、滑らかな曲面 $S$ に対する構成と、quiver から出てくる preprojective algebra に対する構成である。前者については、$S$ 上コンパクト台をもつ連接層のモジュライの Borel Moore ホモロジーが CoHA を与える。virtual pullback を定義する際に射の quasi-smoothness を使うが、これは cotangent complex が degree≥-1 に集中していることとして定義されており、ここで $S$ が２次元であることを使う。構造について分かっていることは少ないが、$S$ に条件を課し層も制限したうえでは完全に決定されており、それがなんかすごい応用を持つらしい。Higgs bundle だとか non-abelian Hodge 対応だとか P=W（Perverse=Weight？）予想だとか、何も分からなかった。
+            </p>
+            <p>
+                後者については、quiver $Q$ の表現の moduli からスタートするのだが、そのままだと２日目の講義で扱った “つまらない” CoHA になってしまうので、射影の余法束を取ってから Borel Moore ホモロジーに積を定義する。$Q$ の表現の moduli の余接束は $Q$ の preprojective algebra $\Pi_2(Q)$ の表現の moduli になっている。こっちは表現論的に “おもしろい” らしく、$Q$ から定まる Kac-Moody Lie 代数と関係がある。具体的には、Kac-Moody Lie 代数の positive part の普遍包絡環はモジュライ上の constructible function 全体のなす代数（積はふつうの CoHA）に埋め込むことができ、その代数は特性サイクルを取る写像を介して余接束の Borel-Moore ホモロジーと関係しているということらしい。特性サイクル（≒特異部分と説明されていた）を取ると余接束の方向に情報が出るというのは超局所層理論の講義で聞いたなぁと思った。
+            </p>
+            <p>
+                ３次元 Calabi-Yau の方は導来シンプレクティック幾何を使うのだが、普通のシンプレクティック幾何も知らないので、何も分からなかった。(-1)-シンプレクティック構造とは tangent complex と cotangent complex[-1] の間に謎の同型が存在することであり、今回関心のある 3-CY 上の層の moduli は(-1)-シンプレクティックである。(-1)-シンプレクティックなら critical cohomology というものが Donaldson-Thomas sheaf の層コホモロジーとして構成でき、これが Borel-Moore ホモロジーの "microlocalization" になっている。すると今までの Borel-Moore ホモロジーからではなく critical cohomology から構成される CoHA が気になるが、滑らかな曲面上の層の moduli に対しては、通常の CoHA と、その標準束の全空間（3-CY になる）の critical cohomology から構成される CoHA が　Hall algebra の構造も含めて同型となる。それぞれの表示に長短があり、これは偉いらしい。
+            </p>
+            <p>
+                3-CY にいくつかデータを固定して semistable sheaf の moduli を考えると perverse filtration が入り、PBW 型の定理が成立する。どこが PBW なのか微塵も分からなかったが、<a href="https://en.wikipedia.org/wiki/Poincar%C3%A9%E2%80%93Birkhoff%E2%80%93Witt_theorem">Wikipedia</a> にも、filtration に対し「associated graded algebra が 1次部分の＋αの対象代数に可換代数として同型であること」をPBW 型の定理と呼ぶと書いてあった。これの１次部分として BPS コホモロジーが定義される。BPS コホモロジーのあるデータ $\chi$ に対する不変性が $\chi$-independence 予想であり、これは K3 曲面（または曲線の余接束）$S$ と $\mathbb{A}^1$ の直積であるような 3-CY に対しては正しい：この場合 $S$ の critical cohomology を使って定義される前層が $S$ の（Borel-Moore cohomology による）CoHA に余積を定めるので、双代数に対する一般的な定理（Milnor-Moore の定理）により、$S$ の Borel-Moore ホモロジー（を $\chi$ を動かして束ねた代数）の primitive part に Lie 代数の構造が入る。すると、adjoint $[a,-]$ が $\chi$ を取り換える写像になっている一方で、adjoint が同型になる $a$ を選べることが分かり、また Borel-Moore ホモロジーと BPS コホモロジーに対しては primitive part に比較定理があるため、BPS コホモロジーの $\chi$-不変性が証明される。（講義内容はここまで）
+            </p>
+            <p>
+                物語としてはこれ以上ないほど面白かった。知っていることの類似がみられたところもあれば、知らないが強いことを言っているところもあり、高度な言葉を使っているだけの還元があるんだろうなとも思えた。しかしあまりにも高度で、技術的な詳細も、定理や定義の正確なステートメントも全く理解していない。おそらく今直感的に想像しているものを、まず位相や張り合わせ概念、射の概念を取り換え、可換だとか極限だとかの概念を全て無限圏における homotopy 的なデータに置き換え、代数を全てある種複体的なサイズのデータである cdga に置き換え、そして......という段階を踏み、それぞれの段階で今まで作ってきたものをもういちど再解釈し再構成しながら進んできてようやく正しく把握できるのだろうが、ひどく果てしなくて、おそろしい。何億年必要なのだろうか。
+            </p>
+            <p>
+                Donaldson-Thomas sheaf の部分で、$z\mapsto z^n$ の pullback の colim みたいに定義される vanishing cycle functor なるものが定義された後、それで定数層を送ると、$f$の臨界点上に台を持つ層になると述べられた。Donaldson-Thomas sheaf は局所的にはこの層に一致するものとして定義される。そして（おそらく導来）スキームレベルではこれの stalk は具体的に計算でき、Milnor fiber のコホモロジーになるらしいというのが面白そうで少し気になった。pullback 概念が derived なものに置き換わっているから、普通のスキームでは正しい結果が出ないのかもしれないが。
+            </p>
+            <p>
+                シンプレクティック幾何というのをいずれ勉強することになるのか分からないが、東大の講究XAのテキストで
+                <ul><li><a href="https://people.math.ethz.ch/~acannas/Papers/lsg.pdf">Silva, Lectures on Symplectic Geometry</a>（直リンク）</li></ul>
+                が挙げられていると先輩に教えていただいた。講究リストにあるということはよい本なのだろうという信頼がある。
+                また、Joyce の "Configurations in abelian categories" という数え上げ幾何のレクチャーノートシリーズを教えていただいた。
+                <ul>
+                    <li><a href="https://arxiv.org/abs/math/0312190">Configurations in abelian categories. I. Basic properties and moduli stacks</a></li>
+                    <li><a href="https://arxiv.org/abs/math/0503029">Configurations in abelian categories. II. Ringel-Hall algebras</a></li>
+                    <li><a href="https://arxiv.org/abs/math/0410267">Configurations in abelian categories. III. Stability conditions and identities</a></li>
+                    <li><a href="https://arxiv.org/abs/math/0410268">Configurations in abelian categories. IV. Invariants and changing stability conditions</a></li>
+                </ul>
+                評判などは知らない。それから、6/15 ~ 6/19 に東北大で非可換特異点解消入門という集中講義があるらしい。行ってみたいが、遠い...
+
+            </p>
+        </div>
+    </section>
+    <section>
+        <h3>5/28（木）</h3>
+        <div class="card-small">
+            <p>
+                集中講義４日目。
+                <ul>
+                    <li>§5：導来代数幾何（DAG）と仮想引き戻し（virtual pullback）</li>
+                </ul>
+                ふつうの代数幾何で現れる「可換代数」を「微分次数付き可換代数（commutative differential graded algebra, cdga）」に置き換え、代数幾何の全てを再展開する（derived
+                algebraic geometry, DAG）。スキームが古典的な代数多様体に non-reduced structure を保持させたものだったように、この意味で「導来」されたスキームは古典的なスキームに
+                "higher な" non-reduced structure を保持させたものとみることができ、ようやく正しいファイバー積（例えば、derived zero locus）を取ることができるようになるらしい。
+                結果として、flatness 等の仮定無しで Borel-Moore ホモロジー（～ Chow 群）の引き戻しが定義できるようになっている。これを仮想引き戻し（virtual pullback）といい、構造射の virtual pullback によって仮想基本類（virtual fundamental class, VFC）が定義される。VFC は数え上げ幾何学の最重要対象であると先生は仰っていた。
+            </p>
+            <p>
+                そもそもが全て無限圏の枠組みで展開されているし、未定義未証明部分も多いのと勉強不足で雰囲気しか追えていないが、非常に面白かった。smooth と schematic が双対的になっていることや、導来 DNC の構成、virtual pullback の構成における specialization map の構成などは、面白いことを言っている感じがして、しっかり咀嚼したら飲み込むことができそうだった。ふつうの代数幾何でずれてしまっている部分が DAG で higher な部分を組み込むことでずれなくなっていたり、ふつうの枠組みでは定義できない virtual pullback が定義できるようになっていたり、系として古典的な様々な写像（Euler 類、Gysin pullback）を復元できたり、素人目にも分かりやすく良い refinement になっていて凄かった。古典的な連接層の導来圏でも、導来関手の合成がずれなくなっていたり、コホモロジーの $f^!$ が定義できるようになっていたり、系として古典的な Serre duality を復元したりという話があったが、どちらかといえばホモロジーの方に住んでいる交叉理論において、それの類似ができているとみてもよいのだろうか、それとももっと高度な話なのだろうか。まず道具が今の私にとっては高度すぎてまったく恐ろしい。
+            </p>
+            <p>
+                講義後に先生に少しお話を伺った。無限圏との向き合い方を伺ったら、（まだ B3 なのだから腰を据えて一回勉強してもいいかもねとは仰っていたが）論文などを読むうえで無限圏のすべてを理解していないと分からないということはないから、いろいろ読んでいく中で扱い方を習得することの方が大事だということだった。教科書や pdf については、以下のものを教えていただいた。
+                <ul>
+                    <li><a href="http://waheyhey.com/math/pdf">幾何学的不変式論 -Mumford's GIT explained-</a>（GIT についてのワヘイヘイさんのノート）</li>
+                    <li><a href="https://ncatlab.org/nlab/files/HuybrechtsLehn.pdf">Huybrechts & Lehn, The Geometry of Moduli Spaces of Sheaves</a>（直 pdf）</li>
+                    <li><a href="https://arxiv.org/abs/1002.4372">Tom Bridgeland, An Introduction to motivic Hall algebras</a></li>
+                    <li><a href="https://arxiv.org/abs/1002.4374">Tom Bridgeland, Hall algebras and curve-counting invariants</a></li>
+                </ul>
+            </p>
+        </div>
+    </section>
+        
+    <section>
         <h3>5/27（水）</h3>
         <div class="card-small">
             <p>
