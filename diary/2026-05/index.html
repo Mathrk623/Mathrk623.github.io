@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark6</title>
+
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .card-small {
+            background: #ffffff;
+            padding: 20px;
+            border: 1px solid #d1d9e0;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            margin-bottom: 25px;
+            border-left: 5px solid var(--main-blue);
+            font-size: 80%;
+        }
+    </style>
+
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1><a href="/">Mark6</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/notes/">Notes</a></li>
+                <li><a href="/articles/">Articles</a></li>
+                <li><a href="/diary/" class="active">Diary</a></li>
+                <li><a href="/profile/">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <h2>2026年5月</h2>
+        <section>
+            <h3>5/21（木）</h3>
+            <div class="card-small">
+                <p> 日記ページを新設した。 </p>
+                <p>
+                    今日は Huybrechts の Fourier-Mukai Transforms in Algebraic Geometry
+                    のゼミがあり、連接層の導来圏の基本事項について発表した。「連接層の導来圏の構造にはもとの空間の幾何学が反映されている」というアイデアを感じられる命題がいくつかあり、ようやく始まったなぁ！
+                    と嬉しくなってしまった。
+                </p>
+                <figure style="text-align: center;">
+                    <img src="/diary/Figures/2026-05-22.jpg" alt="発表内容" style="max-width: 100%; height: auto;">
+                    <figcaption style="font-size: 0.8em; color: #666;">発表内容</figcaption>
+                </figure>
+                <p>
+                    一方証明の細かい部分では、連接層に特有の技術的な補題を使う必要があったり、スペクトル系列によって項の消滅を見なければならなかったり、有界性や有限性を保証するために結局 local algebra
+                    やホモロジー代数をごちゃごちゃする必要があったりと、なかなか大変でもあった。何個か証明しきれず次回への宿題になった命題もあった（すみませんでした）。踏ん張って勉強を続けていきたい！
+                </p>
+            </div>
+        </section>
+        <section>
+            <h3>5/24（日）</h3>
+            <div class="card-small">
+                <p>
+                    今日は向井先生のモジュライ理論Ⅱを読んだ。ベクトル束のモジュライのあたりまで一通り目を通したがかなり面白かった。技術的な部分をかなり省きながら読んでしまったので、具体例が手になじむまでもう少し読み込んでいこうと思う。
+                </p>
+                <p>
+                    もともとは Bridgeland 安定性についての Li
+                    の論文が出た時期に「なにそれ」と思って安定性を調べ始めたのだが、数物セミナーで複素微分幾何のK安定性についての話を聞いて本格的に興味が湧き、最近は（slope）安定性や、不可分であるところのモジュライの理論について勉強している。
+                    このあたりは、古典的な代数多様体の基礎か Riemann 面の話を学んだら、次に触れてみるべき話題なのではないだろうか。面白いのでもっと積極的に周りにも布教していきたいし、勉強次第記事なども書きたい。
+                </p>
+                <p>
+                    プロフィールに相互リンクをいくつか載せた。
+                </p>
+            </div>
+        </section>
+        <section>
+            <h3>5/25（月）</h3>
+            <div class="card-small">
+                <p>
+                    今日から、<a href="https://syllabus.s.isct.ac.jp/courses/2026/1/1-11-411111-0-0/202603881"
+                        target="_blank">Cohomological Hall Algebra（CoHA）に関する金城先生の集中講義</a>に潜る。
+                    初回である今回は
+                <ul>
+                    <li>§0：講義全体の概説</li>
+                    <li>§1：algebraic stack あたりまでの基礎的な定義</li>
+                    <li>§2：Localization formula の証明</li>
+                </ul>
+                という流れだった。
+                </p>
+                <p>
+                    かなり無知なまま講義に突っ込んだので、この講義の主題でない部分にもすでにたくさんの激アツポイントがあり、勉強になった。個人的には、
+                    Dynkin quiver $Q$ に付随する Lie 代数の量子群の positive part $U_q(\mathfrak{n}^+)$ が、
+                    $Q$ の表現の Abel 圏 $\mathrm{Rep}(Q)$ における $\mathrm{Ext}$ の情報を結合定数とすることで構成される Ringel Hall algebra
+                    に一致するという対応が面白かったが、
+                    なんか凄いこと言ってるなぁと思いつつ、不勉強でそれ以上の感想が出ず悔しい。（多分こういうことはこの講義のモチベづけであって、今更すごいなぁと思っているのは遅いのだが）
+                </p>
+                <p>
+                    また、§2の途中で出てきた intersection theory とのアナロジーも、そもそもスキームレベルでの DNC への理解が浅く、ふぅんとしか思えなかった。
+                    最近常に intersection theory で躓いており、聴講するにしても、もっと勉強しなければ...と思っている。
+                </p>
+                <p>
+                    §2の最後では torus 作用に関する equivariant cohomology の積分公式？である Localization formula が証明され、それを
+                    $(\mathbb{C}^*)^{n+1}\curvearrowright\mathbb{P}^n$ に適用することで
+                    $$\sum_{i=0}^n\frac{z_i^n}{\prod_{j\neq i}(z_i-z_j)}=1$$
+                    という初等的な式が証明できるという演習が述べられて面白かった。
+                </p>
+                <p>
+                    また、
+                <ul>
+                    <li>数え上げ幾何と弦理論（Katz）</li>
+                    <li>数え上げ幾何学講義　シューベルト・カルキュラス入門（池田）</li>
+                    <li>代数多様体論（川又）</li>
+                    <li>高次元代数多様体論（川又）</li>
+                </ul>
+                （敬称略）を図書館で借りた。数え上げ方向に進むのか、双有理方向に進むのか、自分でも分からず迷走している。
+                今のところモジュライまわりは面白そうだと思えているが、目移りしすぎるのは良くないだろうか。
+                </p>
+            </div>
+        </section>
+        <section>
+            <h3>5/26（火）</h3>
+            <div class="card-small">
+                <p>
+                    午後からモジュラー形式のゼミがあり、四平方和定理その他への応用をいろいろ面白く教えてもらった。勉強していけば自然に思いつく道具として理解できるのだろうが、初等的な話題に対して
+                    謎の高級な道具が一発で解答を与えてしまうというのは、数学のロマンとも言えるし、あるいは数学の救いのなさともいえる気がして、おそろしい。
+                </p>
+                <p>
+                    集中講義２日目。
+                <ul>
+                    <li>§3：quiver に対する CoHA</li>
+                </ul>
+                quiver に対し、その表現やその短完全列の moduli stack のコホモロジーから構成される CoHA において、積を具体的に表示する公式（shuffle formula）を与える話だった。
+                公式によれば symmetric quiver から構成される CoHA は（Koszul sign rule
+                のもとで）可換な代数になってしまい、また強力な構造定理があるため、あまり表現論的におもしろいことはないらしい。
+                昨日の日記に書いた Ringel Hall Algebra は 量子群なのでおそらくこの意味では「おもしろい」代数だと思うのだが、このふたつの関係がよく分かっていない。
+                </p>
+                <p>
+                    正直 shuffle formula の証明はほとんど追えなかった。
+                    「考えている moduli stack が実はかなり具体的な quotient stack として書ける」というのが全ての計算の根本なのだが、現状 quotient stack が分かっていない。
+                    定義は groupoid の商（分かる）のデータを束ねたもの（厳しい）を stackification（分からない）したものということでそもそも分からないし、イメージも掴めていない。
+                    quotient stack というのは、実際に点レベルで潰し切ってしまうのではなく、「この点とこの点はこのように潰される（=同一視される）べき点ですよ」というデータを保持することで商を実現している
+                    ということだと思うのだが、具体的な計算になると困ってしまう......
+                </p>
+                <p>
+                    もっと言えば、stack に対するコホモロジーも、スキームに解析的位相を入れて通常のコホモロジーを考えたうえで、その関手を ∞-categorical に右 Kan
+                    拡張しますと言われたところで分からない。
+                    スキームの quotient stack に関しては"普通の" equivariant cohomology だと思えばよいのだろうが、そもそも equivariant cohomology
+                    を知らない。
+                    そんな感じだから、証明すべきことはこれですというのはギリギリ分かっても、具体的な計算は追えなかったし、今復習しても詳細を詰め切れる気がしていない。
+                </p>
+                <p>
+                    勉強を、しなければなぁという感じだ。進路に迷走している。
+                </p>
+            </div>
+        </section>
+        <section>
+            <h3>5/27（水）</h3>
+            <div class="card-small">
+                <p>
+                    進路を数え上げ幾何の方向に固定して勉強してみることにした。昨日まで散々悩んでいたのだが、集中講義が面白いのと、昨日の夜から読み始めた池田先生の
+                    <a href="https://www.utp.or.jp/book/b370990.html" target="_blank">数え上げ幾何学講義 シューベルト・カルキュラス入門</a>
+                    が非常に面白かったのが決め手になった。
+                    導来圏（と、いずれ無限圏も？）使うことができて、また現状興味のあるモジュライや安定性、特異点論とも接触しているとなると、今思うと実は勉強しない理由がないのだった。
+                    うまくいけば親しい先輩方の下に付けるというのも個人的には大きい。私は物理の勉強をかなりさぼってきたので、物理から来ている概念が多そうな分野なのが少し怖い気もするが、
+                    むしろ現実的な還元が見えうるというのはうれしいのかもしれない。
+                    まだ問題意識は分かっていないし、勉強してみたら思っていたのと違ったということもありうるので、先生に話を聞きに言ったり、勉強会に参加してみたりしながら都度見直す。
+                </p>
+                <p>
+                    集中講義３日目。
+                <ul>
+                    <li>§4：six-functor formalism</li>
+                </ul>
+                無限圏を簡易的に導入した後、Scholze の <a href="https://arxiv.org/abs/2510.26269" target="_blank">Six-Functor
+                    Formalisms</a> に沿い three-functor formalism
+                の特別な場合として six-functor formalism を定義した。
+                algebraic stack 上の Ind-constructible sheaf（これは何？）のなす無限圏が実際に six functor を持ち云々という性質を満たすというのを、fact
+                として確認した。
+                </p>
+                <p>
+                    そのまま談話会 "Langlands duality for 3-manifolds" に参加した。「数体は３次元多様体に対応する」というスローガンが提示されたのち、
+                    数体側における Langlands 双対の３次元多様体側での類似について、TQFT による定式化や最近の進展が解説された。
+                </p>
+                <p>
+                    スローガン自体は <a
+                        href="https://ja.wikipedia.org/wiki/%E6%95%B0%E8%AB%96%E3%83%88%E3%83%9D%E3%83%AD%E3%82%B8%E3%83%BC"
+                        target="_blank">数論トポロジー（Wikipedia）</a> で説明されている
+                    （以前友人に教えてもらった）。<a href="https://www.morikita.co.jp/books/mid/008391" target="_blank">ガロア圏と基本群</a>
+                    の注意6.4.15でも少しだけ触れられている。
+                    同じく森下先生の <a href="https://www.maruzen-publishing.co.jp/book/b10111384.html"
+                        target="_blank">結び目と素数</a> はおそらくまさにこのスローガンについての本だと思うが読んだことはない。
+                    講演は非常に面白かったのだが、現状物理のことを全く知らないので、「物理的な」ものを数学に持ってくる営みというのが遠く感じられておそろしかった。
+                </p>
+                <p>
+                    その後は懇親会に参加した。同卓の表現論の先生にいろいろ話を伺ったのだが、東大の学部生時代に学年をまたいだ大規模な相互発表会をしていたと仰っていた。
+                    小規模ながら自分もそのようなものを計画していたので大きな励みになった。学部生のうちにさまざまな話題に触れ、自分の興味のある分野を能動的に探し、自分の学びを見つめなおす機会になったら良い。
+                    これからも懇親会などの機会があれば積極的に参加しようと思うし、学んだことがあったら積極的にアウトプットしていこうと思う。
+                </p>
+            </div>
+        </section>
+        <section>
+            <h3>5/28（木）</h3>
+            <div class="card-small">
+                <p>
+                    集中講義４日目。
+                <ul>
+                    <li>§5：導来代数幾何（DAG）と仮想引き戻し（virtual pullback）</li>
+                </ul>
+                ふつうの代数幾何で現れる「可換代数」を「微分次数付き可換代数（commutative differential graded algebra,
+                cdga）」に置き換え、代数幾何の全てを再展開する（derived
+                algebraic geometry, DAG）。スキームが古典的な代数多様体に non-reduced structure を保持させたものだったように、この意味で「導来」されたスキームは古典的なスキームに
+                "higher な" non-reduced structure を保持させたものとみることができ、ようやく正しいファイバー積（例えば、derived zero
+                locus）を取ることができるようになるらしい。
+                結果として、flatness 等の仮定無しで Borel-Moore ホモロジー（～ Chow 群）の引き戻しが定義できるようになっている。これを仮想引き戻し（virtual
+                pullback）といい、構造射の virtual pullback によって仮想基本類（virtual fundamental class, VFC）が定義される。VFC
+                は数え上げ幾何学の最重要対象であると先生は仰っていた。
+                </p>
+                <p>
+                    そもそもが全て無限圏の枠組みで展開されているし、未定義未証明部分も多いのと勉強不足で雰囲気しか追えていないが、非常に面白かった。smooth と schematic が双対的になっていることや、導来
+                    DNC の構成、virtual pullback の構成における specialization map
+                    の構成などは、面白いことを言っている感じがして、しっかり咀嚼したら飲み込むことができそうだった。ふつうの代数幾何でずれてしまっている部分が DAG で higher
+                    な部分を組み込むことでずれなくなっていたり、ふつうの枠組みでは定義できない virtual pullback が定義できるようになっていたり、系として古典的な様々な写像（Euler 類、Gysin
+                    pullback）を復元できたり、素人目にも分かりやすく良い refinement になっていて凄かった。古典的な連接層の導来圏でも、導来関手の合成がずれなくなっていたり、コホモロジーの $f^!$
+                    が定義できるようになっていたり、系として古典的な Serre duality
+                    を復元したりという話があったが、どちらかといえばホモロジーの方に住んでいる交叉理論において、それの類似ができているとみてもよいのだろうか、それとももっと高度な話なのだろうか。まず道具が今の私にとっては高度すぎてまったく恐ろしい。
+                </p>
+                <p>
+                    講義後に先生に少しお話を伺った。無限圏との向き合い方を伺ったら、（まだ B3
+                    なのだから腰を据えて一回勉強してもいいかもねとは仰っていたが）論文などを読むうえで無限圏のすべてを理解していないと分からないということはないから、いろいろ読んでいく中で扱い方を習得することの方が大事だということだった。教科書や
+                    pdf については、以下のものを教えていただいた。
+                <ul>
+                    <li><a href="http://waheyhey.com/math/pdf">幾何学的不変式論 -Mumford's GIT explained-</a>（GIT
+                        についてのワヘイヘイさんのノート）</li>
+                    <li><a href="https://ncatlab.org/nlab/files/HuybrechtsLehn.pdf">Huybrechts & Lehn, The Geometry of
+                            Moduli Spaces of Sheaves</a>（直 pdf）</li>
+                    <li><a href="https://arxiv.org/abs/1002.4372">Tom Bridgeland, An Introduction to motivic Hall
+                            algebras</a></li>
+                    <li><a href="https://arxiv.org/abs/1002.4374">Tom Bridgeland, Hall algebras and curve-counting
+                            invariants</a></li>
+                </ul>
+                </p>
+            </div>
+        </section>
+        <section>
+            <h3>5/29（金）</h3>
+            <div class="card-small">
+                <p>
+                    <a
+                        href="/articles/Reads/Ikeda_Lectures_on_Enumerative_Geometry/index.html">「数え上げ幾何学講義　シューベルト・カルキュラス入門」（池田岳先生）の読書記録</a>を書いた。記録はどうでもよいのだが、この本は本当に面白いので読んだ方がいい。Young
+                    図形や Jacobi-Trudi 公式などの組み合わせ論的な議論が好きな人にもお勧めしたい。
+                </p>
+                <p>
+                    集中講義５日目。
+                <ul>
+                    <li>§6：２次元圏の CoHA</li>
+                    <li>§7：３次元 Calabi-Yau 圏の CoHA と余積</li>
+                </ul>
+                次元というのはホモロジカル次元のことを言う。以下しばらく日記というより面白いパートの抜粋書き起こしになってしまっている。昨日までより詳細な証明が減った分面白いお話が多く、膨れ上がってしまった。
+                </p>
+                <p>
+                    ２次元についてはふたつ例があり、滑らかな曲面 $S$ に対する構成と、quiver から出てくる preprojective algebra に対する構成である。前者については、$S$
+                    上コンパクト台をもつ連接層のモジュライの Borel Moore ホモロジーが CoHA を与える。virtual pullback を定義する際に射の quasi-smoothness
+                    を使うが、これは cotangent complex が degree≥-1 に集中していることとして定義されており、ここで $S$
+                    が２次元であることを使う。構造について分かっていることは少ないが、$S$ に条件を課し層も制限したうえでは完全に決定されており、それがなんかすごい応用を持つらしい。Higgs bundle だとか
+                    non-abelian Hodge 対応だとか P=W（Perverse=Weight？）予想だとか、何も分からなかった。
+                </p>
+                <p>
+                    後者については、quiver $Q$ の表現の moduli からスタートするのだが、そのままだと２日目の講義で扱った “つまらない” CoHA になってしまうので、射影の余法束を取ってから
+                    Borel Moore ホモロジーに積を定義する。$Q$ の表現の moduli の余接束は $Q$ の preprojective algebra $\Pi_2(Q)$ の表現の moduli
+                    になっている。こっちは表現論的に “おもしろい” らしく、$Q$ から定まる Kac-Moody Lie 代数と関係がある。具体的には、Kac-Moody Lie 代数の positive part
+                    の普遍包絡環はモジュライ上の constructible function 全体のなす代数（積はふつうの CoHA）に埋め込むことができ、その代数は特性サイクルを取る写像を介して余接束の
+                    Borel-Moore ホモロジーと関係しているということらしい。特性サイクル（≒特異部分と説明されていた）を取ると余接束の方向に情報が出るというのは超局所層理論の講義で聞いたなぁと思った。
+                </p>
+                <p>
+                    ３次元 Calabi-Yau の方は導来シンプレクティック幾何を使うのだが、普通のシンプレクティック幾何も知らないので、何も分からなかった。(-1)-シンプレクティック構造とは tangent
+                    complex と cotangent complex[-1] の間に謎の同型が存在することであり、今回関心のある 3-CY 上の層の moduli
+                    は(-1)-シンプレクティックである。(-1)-シンプレクティックなら critical cohomology というものが Donaldson-Thomas sheaf
+                    の層コホモロジーとして構成でき、これが Borel-Moore ホモロジーの "microlocalization" になっている。すると今までの Borel-Moore ホモロジーからではなく
+                    critical cohomology から構成される CoHA が気になるが、滑らかな曲面上の層の moduli に対しては、通常の CoHA と、その標準束の全空間（3-CY になる）の
+                    critical cohomology から構成される CoHA が　Hall algebra の構造も含めて同型となる。それぞれの表示に長短があり、これは偉いらしい。
+                </p>
+                <p>
+                    3-CY にいくつかデータを固定して semistable sheaf の moduli を考えると perverse filtration が入り、PBW 型の定理が成立する。どこが PBW
+                    なのか微塵も分からなかったが、<a
+                        href="https://en.wikipedia.org/wiki/Poincar%C3%A9%E2%80%93Birkhoff%E2%80%93Witt_theorem">Wikipedia</a>
+                    にも、filtration に対し「associated graded algebra が 1次部分の＋αの対象代数に可換代数として同型であること」をPBW
+                    型の定理と呼ぶと書いてあった。これの１次部分として BPS コホモロジーが定義される。BPS コホモロジーのあるデータ $\chi$ に対する不変性が $\chi$-independence
+                    予想であり、これは K3 曲面（または曲線の余接束）$S$ と $\mathbb{A}^1$ の直積であるような 3-CY に対しては正しい：この場合 $S$ の critical
+                    cohomology を使って定義される前層が $S$ の（Borel-Moore cohomology による）CoHA に余積を定めるので、双代数に対する一般的な定理（Milnor-Moore
+                    の定理）により、$S$ の Borel-Moore ホモロジー（を $\chi$ を動かして束ねた代数）の primitive part に Lie 代数の構造が入る。すると、adjoint
+                    $[a,-]$ が $\chi$ を取り換える写像になっている一方で、adjoint が同型になる $a$ を選べることが分かり、また Borel-Moore ホモロジーと BPS
+                    コホモロジーに対しては primitive part に比較定理があるため、BPS コホモロジーの $\chi$-不変性が証明される。（講義内容はここまで）
+                </p>
+                <p>
+                    物語としてはこれ以上ないほど面白かった。知っていることの類似がみられたところもあれば、知らないが強いことを言っているところもあり、高度な言葉を使っているだけの還元があるんだろうなとも思えた。しかしあまりにも高度で、技術的な詳細も、定理や定義の正確なステートメントも全く理解していない。おそらく今直感的に想像しているものを、まず位相や張り合わせ概念、射の概念を取り換え、可換だとか極限だとかの概念を全て無限圏における
+                    homotopy 的なデータに置き換え、代数を全てある種複体的なサイズのデータである cdga
+                    に置き換え、そして......という段階を踏み、それぞれの段階で今まで作ってきたものをもういちど再解釈し再構成しながら進んできてようやく正しく把握できるのだろうが、ひどく果てしなくて、おそろしい。何億年必要なのだろうか。
+                </p>
+                <p>
+                    Donaldson-Thomas sheaf の部分で、$z\mapsto z^n$ の pullback の colim みたいに定義される vanishing cycle functor
+                    なるものが定義された後、それで定数層を送ると、$f$の臨界点上に台を持つ層になると述べられた。Donaldson-Thomas sheaf
+                    は局所的にはこの層に一致するものとして定義される。そして（おそらく導来）スキームレベルではこれの stalk は具体的に計算でき、Milnor fiber
+                    のコホモロジーになるらしいというのが面白そうで少し気になった。pullback 概念が derived なものに置き換わっているから、普通のスキームでは正しい結果が出ないのかもしれないが。
+                </p>
+                <p>
+                    シンプレクティック幾何というのをいずれ勉強することになるのか分からないが、東大の講究XAのテキストで
+                <ul>
+                    <li><a href="https://people.math.ethz.ch/~acannas/Papers/lsg.pdf">Silva, Lectures on Symplectic
+                            Geometry</a>（直リンク）</li>
+                </ul>
+                が挙げられていると先輩に教えていただいた。講究リストにあるということはよい本なのだろうという信頼がある。
+                また、Joyce の "Configurations in abelian categories" という数え上げ幾何のレクチャーノートシリーズを教えていただいた。
+                <ul>
+                    <li><a href="https://arxiv.org/abs/math/0312190">Configurations in abelian categories. I. Basic
+                            properties and moduli stacks</a></li>
+                    <li><a href="https://arxiv.org/abs/math/0503029">Configurations in abelian categories. II.
+                            Ringel-Hall algebras</a></li>
+                    <li><a href="https://arxiv.org/abs/math/0410267">Configurations in abelian categories. III.
+                            Stability conditions and identities</a></li>
+                    <li><a href="https://arxiv.org/abs/math/0410268">Configurations in abelian categories. IV.
+                            Invariants and changing stability conditions</a></li>
+                </ul>
+                評判などは知らない。それから、6/15 ~ 6/19 に東北大で非可換特異点解消入門という集中講義があるらしい。行ってみたいが、遠い...
+
+                </p>
+            </div>
+        </section>
+        <section>
+            <h3>5/30（土）</h3>
+            <div class="card-small">
+                <p>
+                    Milnor & Stasheff, Characteristic Classes
+                    （邦題：特性類講義）を、知っている内容はとばしつつ100ページ弱読んだ。この本は古いタイプセットだと非常に読みにくいが、<a
+                        href="https://aareyanmanzoor.github.io/Texromancers.html">TeXromancers</a> が TeX 打ちし直した pdf
+                    が落ちているので、これを読んでいる。まぁ和訳版を買って読めばよいのだが...
+                </p>
+                <p>
+                    大まかな流れとしては、
+                <ul>
+                    <li>1~3. 多様体やベクトル束の一般論</li>
+                    <li>4. Stiefel-Whitney 類の公理と周辺</li>
+                    <li>5~6. Grassmann 多様体とそのコホモロジー環の構造</li>
+                    <li>6. Stiefel-Whitney 類の一意性</li>
+                </ul>
+                である。結局すべての Stiefel-Whitney 類は無限次元 Grassmann 多様体 $\mathrm{Gr}_n(\mathbb{R}^\infty)$
+                における普遍束の類の引き戻しとして実現されるので、普遍束に対する類が一致すればよく、$\mathrm{H}^*(\mathrm{Gr}_n(\mathbb{R}^\infty))\cong\mathrm{H}^*((\mathbb{P}^\infty)^n)$
+                が効く。いまのところばらばらに４つ聞いたことがあるくらいでそれぞれの特徴とか関係が分かっていないし、統一的な理解もできていない。特性類についていろいろ整理出来たら pdf なり記事なりにまとめたい。
+                </p>
+                <p>
+                    存在性のほうの証明もちらっと覗いてみたが、Thom 同型と Steenlod の square operator
+                    の存在を一旦認めたうえで示すようだった（もちろん、認めた内容は後の章で回収されている）。昨年後期に潜っていた cobordism
+                    の講義ではそのあたりの話もしていたと思うのだが、もったいないことをしたなぁと思う。もう少し勉強してから望めばよかった。先は長い......
+                </p>
+                <p>
+                    勉強モチベは代数幾何にある。交叉理論で特性類はどうやら大事らしかったので、一旦幾何学的な意味に直感が働くようにしておきたかった。Fulton では Euler 類と Chern
+                    類、Stiefel-Whiteney 類は定義されるが、Pontrjagin 類は出てこないようだった。また逆に Segre 類や Todd 類は Milnor&Stasheff
+                    には載っていないようだった（これらを同じくくりで述べることが正しいことなのかもわかっていない）。Fulton, Intersection Thoery の p.68 の "Notes and
+                    References" 欄に以下の記述があった。
+                </p>
+                <figure style="text-align: center;">
+                    <img src="/diary/Figures/2026-05-30.png" alt="p.68" style="max-width: 100%; height: auto;">
+                    <figcaption style="font-size: 0.8em; color: #666;">p.68</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h3>5/31（日）</h3>
+            <div class="card-small">
+                <p>
+                    今日は <a href="https://tosuu.web.fc2.com/about.html">都数</a> の総会があった。講演のテーマは「円周の基本群から Bott
+                    周期性へ」で、$f:S^1\to\mathbb{C}^\times$ の回転数 $w(f)$ が、$f$ に付随する Toeplitz 作用素 $T_f$ の index
+                    として計算できることから始まり、その一般化として $K$ 群関手が $\ell^2(\mathbb{N})$ 上のFredholm 作用素全体で表現され、Bott
+                    周期性までたどりつく本当に面白い講演だった。私が K 理論と Bott 周期性について読んだ <a
+                        href="https://pi.math.cornell.edu/~hatcher/VBKT/VBpage.html">Hatcher, Vector Bundles and
+                        K-Thoery</a> では関数解析の手法は使っていなかったが、途中で clutching function
+                    の多項式近似をゴリゴリ行うパートがあり、おそらくそれが関数解析的には三角多項式の稠密性からある線形作用素のコンパクト性を出すパートに対応しているのだろうという結論になった。関数解析の言葉を使えばそういった議論を見通し良く行うことができるのだろう。全く勉強していなかったが、興味が出てきた。
+                </p>
+                <p>
+                    総会では、松村可換環論のゼミを一緒にやっている後輩や、同じ学年で同じ方向を勉強している方と初めて対面して話した。また自分がやっているゼミに興味がありそうな方を招待したり、逆に興味があるゼミを聴かせてもらえることになったり、勉強会や集中講義の情報を交換したり、シンプルに数学の分からなかった部分を教えていただいたり、非常に有意義な時間だった。あと純粋に懇親会（ただの食事会）が非常に楽しかった。
+                </p>
+                <p>
+                    教えていただいた本と pdf をメモしておく。
+                <ul>
+                    <li><a href="https://www.shokabo.co.jp/mybooks/ISBN978-4-7853-1210-7.htm">竹内慎吾、「数学のとびら
+                            関数解析」（裳華房）</a></li>
+                    <li><a href="https://sites.google.com/view/bastiaan-cnossen/home">B. Cnossen. Stable Homotopy Thoery
+                            and Higher Algebra.</a></li>
+                    <li><a href="https://arxiv.org/abs/math/9908027">T. Bridgeland, A. King, and M. Reid. The McKay
+                            correspondence as an equivalence of derived categories.</a>（導来McKayの論文）</li>
+                </ul>
+                </p>
+        </section>
+    </main>
+
+</body>
+
+</html>
