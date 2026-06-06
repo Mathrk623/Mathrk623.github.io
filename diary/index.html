@@ -48,29 +48,96 @@
         <a href="/diary/calendar.html">日記アーカイブへ</a>
         <h2>2026年6月</h2>
         <section>
-            <section>
-                <h3>6/2（火）</h3>
-                <div class="card-small">
-                    <p>
-                        午後に上原・戸田「連接層の導来圏と代数幾何学」の内容周辺についてのゼミに参加させてもらった。Bondal-Orlov の reconstruction theorem、すなわち標準束か反標準束が ample なときに導来同値が同型を意味するという定理について聞いた。私も代数閉体上に限った形で４日の Fourier-Mukai のゼミで発表する予定だったのだが、それより一般的な形で示されている原論文の証明を見通しよく聞けてありがたかった。Hilbert スキームや Quot スキームについてもお話を聞けた。
-                    </p>
-                    <p>
-                        コーヒータイムでは植田研の方にシンプレクティック幾何の話を伺った。良い射が簡単には定義できないため1-圏論と相性が悪く、自然に $A_\infty$ のような higher な構造が必要とされるということだった。とても面白そうではあるが、まったくもって手を出せる気がしない。
-                    </p>
-            </section>
-            <section>
-                <h3>6/1（月）</h3>
-                <div class="card-small">
-                    <p>
-                        今日は Fourier-Mukai ３章のゼミ準備をしていた。
-                        <ul>
-                            <li>3.4 Grothendieck-Verdier duality</li>
-                        </ul>
-                        本文自体は難しくなかったのだが、演習が難しかった。滑らかなスキームの閉埋め込み $i:X\hookrightarrow Y$（余次元 $c$）に対する Grothendieck-Verdier duality の主張
-                        $$\mathrm{Hom}_X(\mathscr{F},Li^*(\mathscr{E})\otimes\omega_i[-c])\cong\mathrm{Hom}_Y(i_*\mathscr{F},\mathscr{E})$$
-                        を Serre duality なども使わず直接示せというもので、射影的であることを仮定できない。この場合相対標準束 $\omega_i$ は法束の行列式 $\det\mathcal{N}_{X/Y}$ に一致する。結局 Gemini にヒントをもらって Koszul 複体で局所的に自由分解を取り貼り合わせるなんていうめんどくさい方法で示すことになってしまった。もっといい解法があるのだろうか。
-                    </p>
-            </section>
+            <h3>6/5（金）</h3>
+            <div class="card-small">
+                <p>
+                    昼前から先輩の講究を聴講した。ファイバー積を取るときに起きる Gysin pullback のズレが、法束のズレ（excess normal bundle）の Euler 類であるという excess intersection formula は嬉しいことを言っていたし、また射の分解を取って片側を単に pullback にしてしまうことで Gysin 射を refine できるというのはいやまったくありがとう。先輩からその後聞いた bivariant intersection も面白かったし、教えてもらった
+                    <ul>
+                        <li><a href="https://www.preschema.com/lecture-notes/cohdag2022/" target="_blank">Adeel A. Khan, Cohomological Intersection Theory and Derived Algebraic Geometry</a></li>
+                    </ul>
+                    はめちゃくちゃ良いことを言っていそうだった。受け売りだが、交叉というのが本質的に derived な場所に居るのであれば、それは素敵なことだと思う。
+                </p>
+                <p>
+                    そのあとはワークショップの講演を聞いた。曲線のモジュライのコホモロジーというテーマで、基本的な結果が紹介された後、講演者の最近の結果が紹介されたのだが、それがとても面白かった。シンプルに幾何的な話かなぁと思っていたら、突然 Betti 数の分布が正規分布に従うという話になり、また Poincaré 多項式が実根しか持たないという話にもなり、そんな方向性が！ とびっくりし続けていた。確率論や PDE のテクが使われたということ、それが AI の提案であったということも興味深かった。特徴数がたくさん出てきて数値計算できるような場合、それの分布などを調べるのもひとつの方向性なのかぁと勉強になった。
+                </p>
+            </div>
+        </section>
+        <section>
+            <h3>6/4（木）</h3>
+            <div class="card-small">
+                <p>
+                    今日はまず午前から昼をまたいで Fourier-Mukai の発表をした。結局４章まで発表を終わらせた。ノートは <a href="/notes/index.html">ノート類</a> に置いた。ようやく次がタイトル回収、Fourier-Mukai 変換である！
+                </p>
+                <p>
+                    それから J. P. May, A Concise Course in Algebraic Topology のゼミがあり、ホモロジー論の公理的な扱いが確立された。久しぶりだったのでいろいろ完全に忘れており、思い出しながらになってしまった。次は特異ホモロジーで私が発表担当である、週末はこれの準備に費やされそうだ。
+                </p>
+                <p>
+                    それから大講義室で先日から行われていた代数幾何学ミニワークショップに最後のみ参加した。大内先生には講義後少しだけお話を聞きに伺った。
+                </p>
+                <p>
+                    夜には Huybrechts の別の著書、つまり Complex Geometry のゼミがあった。数物セミナーの事後ゼミとして続いている。とても面白かったのだが、微分幾何的な計算に慣れておらず、Newlander-Nirenberg の定理のあたりにまだ馴染めていない。概複素構造が複素構造から誘導される必要十分条件が可積分性で与えられるというのは強いなぁとは思うが、なぜそうなるのかまだつかめていない。Frobenius の定理を理解するのが大事らしいが、<a href="https://ja.wikipedia.org/wiki/%E3%83%95%E3%83%AD%E3%83%99%E3%83%8B%E3%82%A6%E3%82%B9%E3%81%AE%E5%AE%9A%E7%90%86_(%E5%BE%AE%E5%88%86%E3%83%88%E3%83%9D%E3%83%AD%E3%82%B8%E3%83%BC)" target="_blank">Wikipedia</a> の形と今回の形の整合性が分かっていない。微分幾何難しい......
+                </p>
+                <p>
+                    次の節もかなり進んで、Kähler が定義された。最近シンプレクティック幾何の話をよく聞くので、これからも頑張ってついていきたい。
+                </p>
+            </div>
+        </section>
+        <section>
+            <h3>6/3（水）</h3>
+            <div class="card-small">
+                <p>
+                    台風だったので家に籠っていた。今日も今日とて Fourier-Mukai のゼミ準備をしていた。
+                    <ul>
+                        4. Derived Category and Canonical Bundle - Ⅰ
+                        <li>4.1 Ample (anti-)canonical bundle</li>
+                        <li>4.2 Autoequivalences for ample (anti-)canonical bundle</li>
+                        <li>4.3 Ample sequences in derived categories</li>
+                    </ul>
+                    ３章の残りに加え４章も終わらせられそうだったのでちびちびノートを作っていた。
+                    <figure style="text-align: center;">
+                        <img src="/diary/Figures/2026-06-03.png" alt="準備内容" style="max-width: 100%; height: auto;">
+                        <figcaption style="font-size: 0.8em; color: #666;">準備内容</figcaption>
+                    </figure>
+                </p>
+                <p>
+                    4.1 は Bondal-Orlov の reconstruction theorem を証明する。当然激アツ定理だとは思っているのだが、主張が強すぎてまだこの定理のことは掴み切れていないなぁという感じがする。例えば標準束の (anti-)amplenesss が幾何的に何を仮定しているのか説明できない。これから具体的な幾何に触れていってだんだん言っていることが分かってくるのだと思っている。証明は、<a href="/articles/AlgGeo/SerreFunctor/index.html">圏同値と Serre functor の交換</a> を考えて標準束の間に対応をつくり、標準環の Proj として元の多様体を "reconstruct" することで多様体の同型を構成するという流れだが、標準束の ampleness が圏同値で保存されることと、構造層が構造層に送られるように調整できることがかなり非自明になっている。後者について <a href="/pdfs/4. Derived Category and Canonical Bundle - Ｉ.pdf">今回のノート</a> （直pdf）に書いた証明は、あい君に教えてもらった。ありがとう。
+                </p>
+                <p>
+                    4.2 は同じく（反）標準束が ample という仮定の下、連接層の導来圏の自己同値がシフト・多様体自体の自己同型・可逆層とのテンソルの３種類で生成されるという定理だった。証明を見ればまぁそうかとはなるのだが、これもあまりに強いことを言っていてよくわからない。これはむしろ仮定が満たされないときに存在する非自明な自己同値の方が面白いということなのだと思う。Fourier-Mukai 変換の勉強に期待が膨らむところだ。
+                </p>
+                <p>
+                    4.3 は次章への準備的な節で、適当な仮定の下で関手の忠実充満性や同値性を ample sequence 上のそれで判定できるという定理群であり、それぞれ非常に非自明だった。滑らかな射影多様体では $O(n)$ たちを並べた列は共終に切り出しても spanning class を成しており、連接層の導来圏の強力な骨組みとなっている。おそらく次章からいろいろ判定するときに技術的な道具として活躍するはずだが、これらの命題の証明に幾何的なところはなくほぼ純三角圏的な議論である。
+                </p>
+            </div>
+        </section>
+        <section>
+            <h3>6/2（火）</h3>
+            <div class="card-small">
+                <p>
+                    午後に上原・戸田「連接層の導来圏と代数幾何学」の内容周辺についてのゼミに参加させてもらった。Bondal-Orlov の reconstruction theorem、すなわち標準束か反標準束が
+                    ample なときに導来同値が同型を意味するという定理について聞いた。私も代数閉体上に限った形で４日の Fourier-Mukai
+                    のゼミで発表する予定だったのだが、それより一般的な形で示されている原論文の証明を見通しよく聞けてありがたかった。Hilbert スキームや Quot スキームについてもお話を聞けた。
+                </p>
+                <p>
+                    コーヒータイムでは植田研の方にシンプレクティック幾何の話を伺った。良い射が簡単には定義できないため1-圏論と相性が悪く、自然に $A_\infty$ のような higher
+                    な構造が必要とされるということだった。とても面白そうではあるが、まったくもって手を出せる気がしない。
+                </p>
+        </section>
+        <section>
+            <h3>6/1（月）</h3>
+            <div class="card-small">
+                <p>
+                    今日は Fourier-Mukai ３章のゼミ準備をしていた。
+                <ul>
+                    <li>3.4 Grothendieck-Verdier duality</li>
+                </ul>
+                本文自体は難しくなかったのだが、演習が難しかった。滑らかなスキームの閉埋め込み $i:X\hookrightarrow Y$（余次元 $c$）に対する Grothendieck-Verdier duality
+                の主張
+                $$\mathrm{Hom}_X(\mathscr{F},Li^*(\mathscr{E})\otimes\omega_i[-c])\cong\mathrm{Hom}_Y(i_*\mathscr{F},\mathscr{E})$$
+                を Serre duality なども使わず直接示せというもので、射影的であることを仮定できない。この場合相対標準束 $\omega_i$ は法束の行列式 $\det\mathcal{N}_{X/Y}$
+                に一致する。結局 Gemini にヒントをもらって Koszul 複体で局所的に自由分解を取り貼り合わせるなんていうめんどくさい方法で示すことになってしまった。もっといい解法があるのだろうか。
+                </p>
+        </section>
     </main>
 
 </body>
