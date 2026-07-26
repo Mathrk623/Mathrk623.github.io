@@ -67,14 +67,14 @@
                         Abel圏 の間の右完全関手 $F:\mathcal{C}\to\mathcal{D}$ の通常の導来関手は、$M\in\mathcal{C}$ ごとに
                         <ol>
                             <li>射影分解 $P^\bullet\to M$ を取り、鎖複体の圏に持ち上げる。</li>
-                            <li>$LF(M)\coloneqq F(P^\bullet)$ と定義する。これは導来圏のレベルの関手に導来されている。</li>
+                            <li>$LF(M):= F(P^\bullet)$ と定義する。これは導来圏のレベルの関手に導来されている。</li>
                         </ol>
                         という流れで計算される。鎖複体の圏にはモデル圏の構造が入るが、この構成には一般的なモデル圏での対応物 total derived functor がある。こちらで導来するのに「良い」関手は Quillen 関手、すなわち「良い」随伴関手の組
                         $$F:\mathcal{C}\rightleftarrows\mathcal{D}:G\quad(F\dashv G)$$
                         を以て $\mathcal{C}$ から $\mathcal{D}$ への射としたものであり、$A\in\mathcal{C}$ ごとに
                         <ol>
                             <li>cofibrant replacement $X\to A$ を取る（この replacement はモデル圏の公理から存在が保証されることに注意）。</li>
-                            <li>$LF(A)\coloneqq F(X)$ と定義する。これはホモトピー圏のレベルの関手に導来されている。</li>
+                            <li>$LF(A):= F(X)$ と定義する。これはホモトピー圏のレベルの関手に導来されている。</li>
                         </ol>
                         という流れで計算される（同時に、$G$ の右導来 $RG$ も計算され、随伴が引き継がれる）。これは「良い」随伴を持つ関手しかカバーしないから、先の Abel 圏における導来関手の計算を完全に含んでいるわけではない（例えば局所コホモロジーや完備化などは含まないが、順像/逆像やテンソル/Hom は含んでいる）。
                     </p>
@@ -83,13 +83,13 @@
                     </p>
                     <p>
                         そして、導来したい関手は、第一完全列を眺めると、
-                        $$\Omega_{(-)/R}:\mathrm{Alg}_R/S\to\mathm{Mod}_S:A\mapsto S\otimes_A\Omega_{A/R}$$
+                        $$\Omega_{(-)/R}:\mathrm{Alg}_R/S\to\mathrm{Mod}_S:A\mapsto S\otimes_A\Omega_{A/R}$$
                         をsimplicial に持ち上げた
-                        $$\Omega_{(-)/R}:\mathrm{sAlg}_R/S\to\mathm{sMod}_S:A\mapsto S\otimes_A\Omega_{A/R}$$
+                        $$\Omega_{(-)/R}:\mathrm{sAlg}_R/S\to\mathrm{sMod}_S:A\mapsto S\otimes_A\Omega_{A/R}$$
                         であるべきだと決まる。これが「良い」随伴を持ち Quillen 関手であれば、モデル圏の一般論が適用されるはずだが、実際にそうなる。加群に対して積を入れる操作として思い浮かぶ最初の操作、すなわち idealization の simplicial な持ち上げ
-                        $$S\ltimes-:\mathm{sMod}_S\to\mathrm{sAlg}_R/S:M\mapsto S\ltimes M$$
+                        $$S\ltimes-:\mathrm{sMod}_S\to\mathrm{sAlg}_R/S:M\mapsto S\ltimes M$$
                         が右随伴を与える。よって導来された微分加群 $\Omega_{S/R}$ とは、$\mathrm{Alg}_R$ において $S$ の cofibrant replacement $A\to S$ を取って関手を計算した
-                        $$\mathbb{L}_{S/R}\coloneqq S\otimes_A\Omega_{A/R}$$
+                        $$\mathbb{L}_{S/R}:= S\otimes_A\Omega_{A/R}$$
                         であろう！　これが $\Omega_{S/R}$ の真の姿であり、余接複体と呼ばれる対象である。
                     </p>
                     <p>    
@@ -106,9 +106,9 @@
                     </p>
                     <p>
                         この導来関手には、もっと自然で、おそらく本質的な解釈がある。idealization
-                        $$S\ltimes-:\mathm{sMod}_S\to\mathrm{sAlg}_R/S$$
+                        $$S\ltimes-:\mathrm{sMod}_S\to\mathrm{sAlg}_R/S$$
                         は、実は忠実充満かつ本質的像が $\mathrm{sAlg}_R/S$ のabelian object 全体であり、よって同値
-                        $$S\ltimes-:\mathm{sMod}_S\overset{\sim}{\to}(\mathrm{sAlg}_R/S)_{ab}$$
+                        $$S\ltimes-:\mathrm{sMod}_S\overset{\sim}{\to}(\mathrm{sAlg}_R/S)_{ab}$$
                         を定める。これによって idealization を単なる包含関手だと思うことにすると、その左随伴である微分加群とのテンソルの方は、
                         $$\Omega_{(-)/R}=\mathrm{Ab}:\mathrm{sAlg}_R/S\to(\mathrm{sAlg}_R/S)_{ab}$$
                         という、"abelianization" と呼ぶにふさわしい関手となる。これを以て、「André-Quillen homology とは、abelianization の total derived functor である」と唱えることができ、微分加群という言葉はここで消える。
