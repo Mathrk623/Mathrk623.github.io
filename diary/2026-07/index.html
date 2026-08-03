@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark6</title>
+
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .card-small {
+            background: #ffffff;
+            padding: 20px;
+            border: 1px solid #d1d9e0;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            margin-bottom: 25px;
+            border-left: 5px solid var(--main-blue);
+            font-size: 80%;
+        }
+    </style>
+
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1><a href="/">Mark6</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/notes/">Notes</a></li>
+                <li><a href="/articles/">Articles</a></li>
+                <li><a href="/diary/" class="active">Diary</a></li>
+                <li><a href="/profile/">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <a href="/diary/calendar.html">日記アーカイブへ</a>
+        <h2>2026年7月</h2>
+    <section>
+        <h3>7/25（土）</h3>
+        <div class="card-small">
+            <p>
+                今月は試験対策しかしていなかったので日記に書くことがなく、さぼり散らかしてしまった。試験は終わったので、バイトはあるが、勉強を頑張りたい。
+            </p>
+            <p>
+                試験期間中は勉強計画の妄想が捗る。８月はしばらくシンプレクティック幾何学の勉強をしつつ、段階的に Gromov-Witten 理論の勉強に入っていこうと、テスト期間のメモには書いてある。テキストとしては、
+                <ul>
+                    <li><a href="https://arxiv.org/abs/math/0505366">Silva. Simplectic Geometry</a>（シンプレクティック幾何の教科書）</li>
+                    <li><a href="https://bookstore.ams.org/view?ProductCode=COLL/47">Manin. Frobenius Manifolds, Quantum Cohomology, and Moduli Spaces</a>（メインテキスト）</li>
+                    <li><a href="https://bookstore.ams.org/coll-52-r/">$J$-holomorphic Curves and Symplectic Topology: Second Edition</a>（聴講するゼミで読む本）</li>
+                </ul>
+                を中心に、もう少し軽いレクチャーノートや、勉強会で使う論文などにも目を通していきたい。読み始めたらそれぞれの内容にも触れる。
+            </p>
+            <p>
+                ともあれ、今日は差し迫った松村可換環論ゼミの発表準備をしていた。今回は「§21. 完交環」で、短めなのだが、読み始めてみると、後への接続も良く分からないばかりか、Cohen の構造定理を認めるとこうなりますだの、André のホモロジー論というのがすごいんだよ（内容は難しいので触れない）だのと、なかなか"準備のしがいがある"節だった。構造定理を認めることは良いとして、André のホモロジー論なるものについて少し調べていた。ホモトピー論を使って定義される概念ということで諦めようと思っていたのだが、例の代トポ文献案内のサイトで
+                <ul>
+                    <li><a href="https://arxiv.org/abs/math/0609537">Model Categories and Simplicial Methods</a></li>
+                </ul>
+                という pdf が見通し良くておすすめだよ、と書かれていて、読んでみると確かにとても良さげなので、読んでいる。本当は松村はさっさと終わらせてシンプレクティックの勉強に入らなければならないのだが...　今のところまだモデル圏の一般論列挙部分までしか読めていないが、なんとかまとめたい。
+            </p>
+            <p>
+                CM 環と Gorenstein 環の定義はとりあえず自然なものだと自分の中で落とすことができたが（個人的には dualizing complex が連接/可逆になる環のことであるという特徴づけが一番しっくり来た）、完交環は最初の定義がかなり分かりにくい。内在的に定義しようとすると Koszul 複体の１次ホモロジーの次元が云々という条件になってしまい良く分からないし、外在的な特徴づけとして出てくる「完備化すると正則局所環の正則列による剰余環になる」というのは、幾何的意味も明瞭ではあるが、formal な（つまり、完備化を挟んだ）定義になっているのが良く分からない。そこが、André（-ここには Quillen も付けるべきらしい）ホモロジー $H_p(-,-,-)$ なる系列を用いると、
+                <ul>
+                    <li>$A$ が正則 $\Leftrightarrow H_2(A,k,k)=0$</li>
+                    <li>$A$ が完交 $\Leftrightarrow H_3(A,k,k)=0$</li>
+                </ul>
+                と、想像しうる限り最も自然な形で完交性が現れてくるらしい。この $H_p$ は本来 $A\to B\to C$ から現れる微分加群の完全系列
+                $$C\otimes_B\Omega_{B/A}\to\Omega_{C/A}\to\Omega_{C/B}\to 0$$
+                の "導来関手" として考えられたものであり、$A$ 代数の圏という非 Abel な状況で "導来関手" を構成するために、simplicial な resolution を取ったりするということらしい。そして$H(-,-,-)$ の背後の本質的対象、すなわちホモロジーを取る前の複体が $\mathbb{L}_{B/A}$ すなわち cotangent complex であり、完全三角
+                $$C\otimes^L_B\mathbb{L}_{B/A}\to\mathbb{L}_{C/A}\to\mathbb{L}_{C/B}\overset{+1}{\to}$$
+                を持っている。さらに導来スキームの射が局所完全交叉であることは「cotangent complex が perfect かつ次数が $[-1,0]$ に収まっている」こと、すなわち quasi-smooth と同義となり、これは DAG において正しい交叉を取れるようになった結果、局所完全交叉はもはや十分滑らかなものとして扱えるようになっていると解釈できるらしい。
+            </p>
+            <p>
+                らしいらしいという話しかできていない。今回の松村では $H(-,-,-)$ の定義のみ説明して、余接複体に関しては軽く触れるにとどめ、導分の節に入るまでに stacks project のそのあたりを読み進めておきたいと思っている。
+            </p>
+            <p>
+                それから、
+                <ul>
+                    <li>「formal な完交環」つまり「完備化したら正則局所環の正則列剰余」という定義</li>
+                    <li>「absolute な完交環」つまり「自分自身がすでに正則局所環の正則列剰余」という定義</li>
+                </ul>
+                が一致しないことは松村では述べられていない。調べたところでは、
+                <ul>
+                    <li><a href="https://arxiv.org/abs/1109.4921">Are complete intersections complete intersections?</a></li>
+                </ul>
+                という面白い名前の pdf に、１次元整域では一致することと、３次元では一致しないことが書いてあった。すなわち、環 $R$ 自身は正則局所環の準同型像ではないが、$\hat{R}$ は正則局所環の正則列剰余になっているという例である。構成を追おうと思ったが信じられないほど長大だったので諦めた。「$R$ 自身は優秀からほど遠いが、$\hat{R}=\mathbb[[x,y,z,w]]/(x^2+y^2)$ になる」らしい。恐ろしいことだ...
+            </p>
+        </div>
+    </section>
+    
+    <section>
+        <h3>7/26（日）</h3>
+        <div class="card-small">
+            <p>
+                昨日に引き続き André-Quillen homology （以下 AQ ）について調べていた。昨日挙げた pdf は大体読んだので、同じ議事録内にある
+                <ul>
+                    <li><a href="https://arxiv.org/abs/math/0609151">Andre-Quillen homology of commutative algebras</a></li>
+                </ul>
+                をメインで読んだ。こっちは AQ の定義までの最短経路といった感じで、モデル圏などの言葉は導入せず、微分加群の完全列を導来したいという目的に絞った構成を行っていくストーリーだった。さきにモデル圏のセッティングで議論する方を読んでおいた方が見通しが良くなると思う。学んだ内容をまとめてみるが、間違いが含まれていたらすみません。
+            </p>
+            <p>
+                まず、やはりスタート地点は第一完全列である。環準同型の列 $A\to B\to C$ から
+                $$C\otimes_B\Omega_{B/A}\to\Omega_{C/A}\to\Omega_{C/B}\to 0$$
+                という右完全列が得られる。この左に完全列を伸ばしたいものの、微分加群というのは環準同型に対して定義されるものであり、積構造を忘れるわけにはいかないので、domain が Abel 圏でない"導来関手"を構成せねばならないということになる。
+            </p>
+            <p>
+                Abel圏 の間の右完全関手 $F:\mathcal{C}\to\mathcal{D}$ の通常の導来関手は、$M\in\mathcal{C}$ ごとに
+                <ol>
+                    <li>射影分解 $P^\bullet\to M$ を取り、鎖複体の圏に持ち上げる。</li>
+                    <li>$LF(M):= F(P^\bullet)$ と定義する。これは導来圏のレベルの関手に導来されている。</li>
+                </ol>
+                という流れで計算される。鎖複体の圏にはモデル圏の構造が入るが、この構成には一般的なモデル圏での対応物 total derived functor がある。こちらで導来するのに「良い」関手は Quillen 関手、すなわち「良い」随伴関手の組
+                $$F:\mathcal{C}\rightleftarrows\mathcal{D}:G\quad(F\dashv G)$$
+                を以て $\mathcal{C}$ から $\mathcal{D}$ への射としたものであり、$A\in\mathcal{C}$ ごとに
+                <ol>
+                    <li>cofibrant replacement $X\to A$ を取る（この replacement はモデル圏の公理から存在が保証されることに注意）。</li>
+                    <li>$LF(A):= F(X)$ と定義する。これはホモトピー圏のレベルの関手に導来されている。</li>
+                </ol>
+                という流れで計算される（同時に、$G$ の右導来 $RG$ も計算され、随伴が引き継がれる）。これは「良い」随伴を持つ関手しかカバーしないから、先の Abel 圏における導来関手の計算を完全に含んでいるわけではない（例えば局所コホモロジーや完備化などは含まないが、順像/逆像やテンソル/Hom は含んでいる）。
+            </p>
+            <p>
+                可換環のホモロジーを作るにあたっても、同様の手段を踏めばよいはずである。つまり、$\mathrm{Alg}_R$ をモデル圏構造を持つ圏に埋め込み、そこで total derived functor を構成して、ホモトピー群 $\pi_i$ を取ったものが期待されるホモロジー論となるだろう。これは正しく、実際には $\mathrm{sAlg}_R$ つまり simplicial R-algebra の圏がそれを実現する舞台となる。ここでの cofibrant replacement は simplicial resolution と呼ばれ、例えば $R$ を正則列で割った環の resolution なんかは、bar construction の pushout という表示を持ち簡明である。
+            </p>
+            <p>
+                そして、導来したい関手は、第一完全列を眺めると、
+                $$\Omega_{(-)/R}:\mathrm{Alg}_R/S\to\mathrm{Mod}_S:A\mapsto S\otimes_A\Omega_{A/R}$$
+                をsimplicial に持ち上げた
+                $$\Omega_{(-)/R}:\mathrm{sAlg}_R/S\to\mathrm{sMod}_S:A\mapsto S\otimes_A\Omega_{A/R}$$
+                であるべきだと決まる。これが「良い」随伴を持ち Quillen 関手であれば、モデル圏の一般論が適用されるはずだが、実際にそうなる。加群に対して積を入れる操作として思い浮かぶ最初の操作、すなわち idealization の simplicial な持ち上げ
+                $$S\ltimes-:\mathrm{sMod}_S\to\mathrm{sAlg}_R/S:M\mapsto S\ltimes M$$
+                が右随伴を与える。よって導来された微分加群 $\Omega_{S/R}$ とは、$\mathrm{Alg}_R$ において $S$ の cofibrant replacement $A\to S$ を取って関手を計算した
+                $$\mathbb{L}_{S/R}:= S\otimes_A\Omega_{A/R}$$
+                であろう！　これが $\Omega_{S/R}$ の真の姿であり、余接複体と呼ばれる対象である。
+            </p>
+            <p>    
+                ここまでくれば André-Quillen homology は定義できていて、係数として $S$ 加群 $N$ を指定するごとに
+                $$D_n(S/R;N)=\pi_n(N\otimes_S\mathbb{L}_{S/R})$$
+                とおけば、$A\to B\to C$ ごとに cofiber 列
+                $$C\otimes_B\mathbb{L}_{B/A}\to\mathbb{L}_{C/A}\to\mathbb{L}_{C/B}$$
+                及び $C$ 加群 $N$ ごとに第一完全列の延長となる長完全列
+                $$\begin{aligned}
+                    \cdots&\to D_1(B/A;N)\to D_1(C/A;N)\to D_1(C/B;N) \\
+                    &\to N\otimes_B\Omega_{B/A}\to N\otimes_C{C/A}\to N\otimes_C\Omega_{C/B}\to 0\\
+                \end{aligned}$$
+                が得られてめでたしめでたしとなる。
+            </p>
+            <p>
+                この導来関手には、もっと自然で、おそらく本質的な解釈がある。idealization
+                $$S\ltimes-:\mathrm{sMod}_S\to\mathrm{sAlg}_R/S$$
+                は、実は忠実充満かつ本質的像が $\mathrm{sAlg}_R/S$ のabelian object 全体であり、よって同値
+                $$S\ltimes-:\mathrm{sMod}_S\overset{\sim}{\to}(\mathrm{sAlg}_R/S)_{ab}$$
+                を定める。これによって idealization を単なる包含関手だと思うことにすると、その左随伴である微分加群とのテンソルの方は、
+                $$\Omega_{(-)/R}=\mathrm{Ab}:\mathrm{sAlg}_R/S\to(\mathrm{sAlg}_R/S)_{ab}$$
+                という、"abelianization" と呼ぶにふさわしい関手となる。これを以て、「André-Quillen homology とは、abelianization の total derived functor である」と唱えることができ、微分加群という言葉はここで消える。
+            </p>
+            <p>
+                なぜ微分加群の導来関手が abelianization なのか？　abelianization というのは代数の「線形化」であるから、直観的には2次の積を無視するような操作をすることになると思うと、微分加群 $\Omega_{S/R}=I/I^2$（$I=\mathrm{Ker}(S\otimes_R S\to S)$）が現れることは自然かもしれない。idealization の方も、$S\ltimes M$ というのはだいたい $M[\varepsilon]/(\varepsilon^2)$ みたいなものなので、たしかに微分っぽいし、現れてもおかしくないような気がする。
+            </p>
+            <p>
+                松村ゼミは延期になったので、（特に余接複体自体について）もう少し理解を深めたい。
+            </p>
+        </div>
+        <div class="card-small">
+            <p>
+                Silva を読み始め、Ⅱ部まで読んだ。いまのところ必修の幾何でやった内容Advancedという感じでそこまで苦しむところはないが、いろいろと面白い現象が書いてあって面白い。多様体 $X,Y$ に対し、余接束 $T^*X,T^*Y$ は自然にシンプレクティック多様体となる。この間に diffeo $\varphi:T^*X\to T^*Y$ があるとき、これが symplectomorphism かどうか、すなわちシンプレクティック構造を保存するかどうかが気になる。実は $\varphi$ が symplectomorphism なら、そのグラフ $\Gamma_\varphi$ は「ラグランジアン多様体」という特別なクラスの部分多様体であることが分かる。逆に積の中にラグランジアン部分多様体があるとき、これがグラフになっているかどうかの判定条件として "Hamilton" 方程式が現れる。
+            </p>
+            <p>
+                Fourier-Mukai では、導来圏の同値 $\Phi_{X\to Y}^{\mathcal{P}}:D^b(X)\overset{\sim}{\to} D^b(Y)$ を与えるような kernel $\mathcal{P} $が満たすべき条件を、$\mathrm{Supp}(\mathcal{P})$ の幾何的条件として解析することが重要であった。標準束がある程度情報を持っていれば、$\mathrm{Supp}(\mathcal{P})$ は $X,Y$ と同次元、さらに双有理になったりして、$\mathrm{Supp}(\mathcal{P})$ が $\Phi_{\mathcal{P}}$ の「グラフ」のように振る舞うことが帰結されるのだった。これは Laglangian 部分多様体が symplectomorphism について果たす役割と似ている。まぁ射を調べるのに積の部分多様体としてのグラフを調べるなんてよくあることだと思うので、べつに特別でもない普遍的な議論なのだろうけど...
+            </p>
+        </div>
+    </section>
+    <section>
+        <h3>7/31（金）</h3>
+        <div class="card-small">
+            <p>
+                月曜から今日まで Silva の Lectures on Symplectic Geometry を少しずつ読み進めていた。勉強会まで（というよりは、８月頭にスタートするゼミまで）かなり日程的に切羽詰まっているので、とりあえず言葉と物語を最低限理解することを目標に流し読みしている。以下 $(M,\omega)$ を $2n$ 次元シンプレクティック多様体とし、$X,Y$ はシンプレクティックと限らない多様体とする。
+                <ol type="I">
+                    <li>Symplectic Manifolds</li>
+                    <ol>
+                        <li>Symplectic Forms</li>
+                        シンプレクティック形式やシンプレクティック空間・多様体の基本的な定義。シンプレクティック多様体は常に偶数次元。（宿題）次元半分の部分空間であって形式が定める"符号付面積"が消えるものを Laglangian 部分空間という。つまり線形空間レベル（多様体の各点レベル）でのLaglangian 部分多様体の定義。
+                        <li>Symplectic Form on the Cotangent Bundle</li>
+                        シンプレクティックでない多様体でも、余接束 $T^*X$ 上には自然な（tautological な）シンプレクティック多様体の構造が入る。さらに底空間の微分同相 $X\to Y$ は余接束のシンプレクティック同相写像（Symplectomorphism） $T^*X\to T^*Y$ に持ち上がる。（逆に余接束のシンプレクティック同相はどの程度底空間の微分同相から来ているか？→Ⅱへ）（宿題）$\omega$ の非退化性より $\omega^n$ は de Rham コホモロジー類として消えない。$S^{2n}$ は $n>1$ で中間のコホモロジーが消えるので、シンプレクティック多様体にならない。
+                    </ol>
+                    <li>Symplectomorphisms</li>
+                    <ol start="3">
+                        <li>Laglangian Submanifolds</li>
+                        次元半分で形式の制限が消える部分多様体を Laglangian 部分多様体という。これを見つけることが大事らしく、この節では主に余接束として $M=T^*X$ と表せる場合の Laglangian 部分多様体の構成を調べている。（逆にシンプレクティック多様体はどの程度余接束からきているか？→へ）
+                        <ul>
+                            <li>（generating function）zero section 
+                                $$X\to T^*X;x\mapsto(x,0)$$
+                                の像は Laglangian 部分多様体になるが、それをグラフとして少し動かした
+                                $$X\to T^*X;x\mapsto(x,\mu_x)$$
+                                の像 $X_\mu$ が Laglangian になるか考えたい。$\mu$ は余接束の切断なので1-形式であり、これが閉であることと $X_\mu$ がLaglangian であることが同値。このとき $\mu=df$ となる $f\in C^\infty(X)$ を generating function という。（Laglangian 部分多様体はどの程度 generating function から来ているか？→へ）</li>
+                            <li>（conormal bundle）任意の部分多様体 $S\subset X$ は常に半分次元の余法束 $N^*S\subset T^*X$ を定めるが、これは常に Laglangian である。</li>
+                            <li>（グラフ）微分同相 $\varphi:M_1\to M_2$ がシンプレクティック同相であることは、そのグラフ $\Gamma_\varphi\subset M_1\times M_2$ が（積に適切なシンプレクティック構造を定めたうえで）Laglangian であることと同値。</li>
+                            （宿題）Ⅰの疑問に答える。$M=T^*X$ のシンプレクティック同相 $g$ とは $\omega$ を保つ（i.e. $g^*\omega=\omega$）微分同相のことだったが、これはすべて底空間の微分同相から来ているとは限らない。しかし、$\omega=-d\alpha$ となる $\alpha$ も保っているのであれば、これは底空間の微分同相から来ている。
+                        </ul>
+                        <li>Generating Functions</li>
+                        シンプレクティック多様体 $M_1~T^*X_1,M_2=T^*X_2$ があるとき、この間にシンプレクティック同相 $\varphi$ を作りたい。上の（グラフ）と（generating function）より、以下の順序で考えられる。
+                        <ol>
+                            <li>$f\in C^\infty(X_1\times X_2)$ からスタートする。</li>
+                            <li>（generating function）により、$f$ から $T^*(X_1\times X_2)=M_1\times M_2$ の Laglangian 部分多様体 $Y$ が生成される。</li>
+                            <li>（グラフ）より、$Y$ が何らかの $\varphi:M_1\to M_2$ のグラフになっていれば、$\varphi$ はシンプレクティック同相である。</li>
+                        </ol>
+                        障害は3のみであり、3の局所的な必要条件を $f$ の微分方程式として表したものが "Hamilton" 方程式である。$f:A\to B$ を作るために $\Gamma_f\subset A\times B$ の幾何的考察を行うという、動的な対象を静的な対象に置き換える技術は Fourier-Mukai にもあった。これは基本的で普遍的な技術なのだろう。（宿題）測地フローへの応用。
+                        <li>Recurrence</li>
+                        $f\in C^\infty(X\times X)$ で生成される $M=T^*X$ の自己シンプレクティック同相 $\varphi:M\to M$ があるとき、$\varphi$ の周期点と $f(x,x)$ の臨界点には全単射があり、動的な対象を静的な対象に置き換えて調べることができるようになっている。さらに適当な条件で反復合成 $\varphi^n$ の生成関数も $f$ を用いて表示できる。
+                    </ol>
+                </ol>
+                飽きた。続きは別の日に書く。いちおう24まで読んだので数日分はこれで埋まるかもしれない。
+            </p>
+        </div>
+    </section>
+</main>
+</body>
+</html>
