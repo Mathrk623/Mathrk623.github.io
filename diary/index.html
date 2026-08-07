@@ -48,6 +48,29 @@
         <a href="/diary/calendar.html">日記アーカイブへ</a>
         <h2>2026年8月</h2>
         <section>
+            <h3>8/6（木）</h3>
+            <div class="card-small">
+                <p>
+                    Fourier-Mukai のゼミで、
+                    <ul>
+                        <li>標準束 $\omega_X$ が big ならば、導来同値⇒双有理同値</li>
+                    </ul>
+                    という小平先生の定理を証明した。最も強い形で正確に述べると、
+                    <ul>
+                        <li>$X,Y$ は、標数零の代数閉体上滑らかな射影多様体であり、その連接層の有界導来圏に三角圏としての同値 $\mathrm{D^b}(X)\simeq\mathrm{D^b}(Y)$ があるとする。このとき、$\omega_X$ が big ならば、$X$ と $Y$ は双有理であり、双有理な correspondence $X\overset{q}{\leftarrow}X\overset{p}{\rightarrow}Y$ によって $q^*\omega_X\cong p^*\omega_Y$ である。</li>
+                    </ul>
+                    "big"（日本語では「巨大」）という条件は見慣れないが、これは $\mathrm{kod}(X,\omega_X)=\mathrm{dim}(X)$ つまり「$\mathrm{H}^0(X,\omega_X^l)$ の次元が $l^{\mathrm{dim}(X)}$ のオーダーで増大する」という条件であり、「大域切断が豊富」という positivity 条件のひとつである。ample よりも少し弱い条件であるため、先の小平先生の結果は、Bondal-Orlov の reconstruction theorem
+                    <ul>
+                        <li>標準束 $\omega_X$ が ample ならば、導来同値⇒同型</li>
+                    </ul>
+                    の仮定を弱め、結果を弱めるとてもうれしい結果になっている。後者はかなり圏論的に扱うことができ同型の構成も単純だったが、今回証明した「双有理同値」はどうしても幾何的代数幾何の技術を大量に使うことになり、本当に厳しかった。小平の補題について川又先生「高次元代数多様体論」を東大のライセンスで電子ブックとして読みながら参考にしたり、Kollár森「双有理幾何学」の英語版のpdfをこれまたライセンスでダウンロードして参考にしたり...と四苦八苦していた。それでも微妙な議論がたくさんあり、双有理力の不足を恥じるばかりだった。後期はMMPの集中講義にも参加するので、９月以降、かなり真剣に勉強しようと思っている。
+                </p>
+                <p>
+                    基本的な思想は、その導来同値を与える Fourier-Mukai kernel $\mathcal{P}\in\mathrm{D^b}(X\times Y)$ を取り、$\mathrm{Supp}(\mathcal{P})$ の幾何的性質を解析するというものである。実はある程度の positivity の条件下で $\mathrm{Supp}(\mathcal{P})$ の中に $X$ や $Y$ と双有理な既約成分が存在することが言え、これの正規化が定理の主張にある $Z$ を与える。小平の補題という big と ample の間隙を測る定理があり、これを用いることで big を "generic に" ample として扱えるようになる。ここまでもかなり大変なのだが、後半の標準束の一致がかなり厳しく、$Z$ の特異点解消まで標準束を持ち上げて比較し、差として現れる例外因子を余次元２を除いてから潰し切り、Hartogs で決着となる。きびし～
+                </p>
+            </div>
+        </section>
+        <section>
             <h3>8/2（日）</h3>
             <div class="card-small">
                 <p>
