@@ -48,6 +48,29 @@
         <a href="/diary/calendar.html">日記アーカイブへ</a>
         <h2>2026年8月</h2>
         <section>
+            <h3>8/7（金）</h3>
+            <p>
+                今日はあるはずだった
+                <ul>
+                    <li><a href="https://bookstore.ams.org/coll-52-r">McDuff, Salamon. $J$-holomorphic Curves and Symplectic Topology: Second Edition</a></li>
+                </ul>
+                のゼミがなくなったが、今日この本を読むつもりで動きを作っていたので、慣性でこれを読み進めた。この本は J-holomorphic curve の数え上げの問題から Gromov-Witten 不変量や量子コホモロジーを扱う本で、最後の章には Floer Homology も載って、付録含めて700ページという長大な教科書になっている（ちなみに McDuff-Salamon といったらほぼ同じ題名の "$J$-holomorphic Curves and Quantum Cohomology" という本もある。こちらは東大のライセンスで pdf を落とせるのに対し、Symplectic Topology の方は何と pdf が落とせない。東大のライセンスで落とせないなんて...）
+            </p>
+            <p>
+                複素多様体 $M$ があるとする。この中に「曲線」を考えるとすると、素朴にはいくつかの正則関数 
+                $$f_i:M\to\mathbb{C}$$
+                の共通零点集合で一次元のものを曲線と呼ぶことになる。一方複素多様体は非自明な部分多様体を持たないこともあり、また概複素構造に一般化した際にこの意味での曲線はほぼほぼ考えられない。概複素多様体 $(M,J)$ に関してより重要なのは逆向き、すなわち Riemann 面 $\Sigma$ を固定した時の、概複素構造を保つ（i.e. "J"-holomorphic である）
+                $$\Sigma\to M$$
+                という「パラメトライズされた曲線」の方であるらしい。これは弦が時間発展で描く「世界面」に対応していて、3-Calabi Yau の中でこれを数え上げることがなにか物理的に重要な意味を持つんだとか、そのあたりは良く知らない。
+            </p>
+            <p>
+                基本的に話はシンプレクティック多様体の中で進んでいくから、７月末から８月頭にかけては Silva を読んでいた。それがひと段落してある程度言葉が分かるようになったので今回この本を読み始めたのだが、想像以上に関数解析の言葉が本質的に使われていてかなりしんどい。モジュライの滑らかさのところなんて Sobolev やら Fredholm やら今まで意識的に避けてきた言葉ばかりだった。$J$-holomorphic であるというのは要するに微分方程式的条件なので、非自明な存在性定理などを出そうとするとやはり関数解析が本質になるらしい。そもそも関数解析パートまで証明を全部追おうとしているわけではないが、それでも証明の流れだけは追っておきたいので結構踏ん張りながら読んでいる。
+            </p>
+            <p>
+                読みたい本はもう一冊あるが、これは Gromov-Witten や 量子コホモロジーの構造論的な部分を operad などの言葉で整理するところに興味があるので、何を数え上げているのかということに関してはあまり扱っていないようだった。お盆でなるべくシンプレクティック側から Gromov-Witten のおおもとを学び、Alper と Fulton-Pandharipande で代数幾何側からも学びつつ、多角的に理解を深めていきたいと思う。やはりこういう勉強が一番好きだ。
+            </p>
+        </section>
+        <section>
             <h3>8/6（木）</h3>
             <div class="card-small">
                 <p>
@@ -57,9 +80,9 @@
                     </ul>
                     という小平先生の定理を証明した。最も強い形で正確に述べると、
                     <ul>
-                        <li>$X,Y$ は、標数零の代数閉体上滑らかな射影多様体であり、その連接層の有界導来圏に三角圏としての同値 $\mathrm{D^b}(X)\simeq\mathrm{D^b}(Y)$ があるとする。このとき、$\omega_X$ が big ならば、$X$ と $Y$ は双有理であり、双有理な correspondence $X\overset{q}{\leftarrow}X\overset{p}{\rightarrow}Y$ によって $q^*\omega_X\cong p^*\omega_Y$ である。</li>
+                        <li>$X,Y$ は、標数零の代数閉体上滑らかな射影多様体であり、その連接層の有界導来圏に三角圏としての同値 $\mathrm{D^b}(X)\simeq\mathrm{D^b}(Y)$ があるとする。このとき、$\omega_X$ が big ならば、$X$ と $Y$ は双有理であり、双有理な correspondence $X\overset{q}{\leftarrow}Z\overset{p}{\rightarrow}Y$ によって $q^*\omega_X\cong p^*\omega_Y$ である。</li>
                     </ul>
-                    "big"（日本語では「巨大」）という条件は見慣れないが、これは $\mathrm{kod}(X,\omega_X)=\mathrm{dim}(X)$ つまり「$\mathrm{H}^0(X,\omega_X^l)$ の次元が $l^{\mathrm{dim}(X)}$ のオーダーで増大する」という条件であり、「大域切断が豊富」という positivity 条件のひとつである。ample よりも少し弱い条件であるため、先の小平先生の結果は、Bondal-Orlov の reconstruction theorem
+                    "big"（日本語では「巨大」）という条件は見慣れないが、これは $\mathrm{kod}(X,\omega_X)=\mathrm{dim}(X)$ つまり「$\mathrm{H}^0(X,\omega_X^l)$ の次元が $l^{\mathrm{dim}(X)}$ のオーダーで増大する」という条件であり、positivity 条件のひとつである。ample よりも少し弱い条件であるため、先の小平先生の結果は、Bondal-Orlov の reconstruction theorem
                     <ul>
                         <li>標準束 $\omega_X$ が ample ならば、導来同値⇒同型</li>
                     </ul>
